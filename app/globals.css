@@ -2,20 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+    font-family: "sf-hello";
+    src: url(./fonts/sf-hello.ttf); 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+    font-family: "sf-black";
+    src: url(./fonts/sf-black.ttf);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: "sf-bold";
+    src: url(./fonts/sf-bold.ttf);
+}
+
+@font-face {
+    font-family: "sf-medium";
+    src: url(./fonts/SF-Compact-Display-Medium.otf);
+}
+
+@font-face {
+    font-family: "sf-regular";
+    src: url(./fonts/SF-Compact-Display-Regular.otf);
+}
+
+@font-face {
+    font-family: "sf-semibold";
+    src: url(./fonts/SF-Compact-Display-Semibold.otf);
+}
+
+@font-face {
+    font-family: "sf-thin";
+    src: url(./fonts/SF-Compact-Display-Thin.otf);
+}
+
+@font-face {
+    font-family: "sf-ultrathin";
+    src: url(./fonts/SF-Compact-Display-Ultralight.otf);
+}
+
+@font-face {
+    font-family: "sf-regular-rounded";
+    src: url(./fonts/SF-Pro-Rounded-Regular.otf);
+}
+
+@font-face {
+    font-family: "sf-semibold-rounded";
+    src: url(./fonts/SF-Pro-Rounded-Semibold.otf);
 }
