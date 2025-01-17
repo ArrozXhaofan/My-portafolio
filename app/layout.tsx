@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { url } from "inspector";
-
 
 export const metadata: Metadata = {
   title: "My Projects",
