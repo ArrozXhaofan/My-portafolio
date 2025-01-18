@@ -96,42 +96,74 @@ export default function Home() {
             Mis proyectos
           </h3>
 
-          <div className='flex flex-wrap pt-20 justify-center gap-5 lg:hidden'>
-            <img src="p1.png" alt="proyecto 1 reference"
+          <div className='flex-wrap pt-20 justify-center gap-5 hidden md:flex lg:hidden '>
+            <img data-aos="fade-up" data-aos-duration="500"
+              src="p1.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-            <img src="p2.png" alt="proyecto 1 reference"
+            <img data-aos="fade-up" data-aos-duration="500"
+              src="p2.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-            <img src="p3.png" alt="proyecto 1 reference"
+            <img data-aos="fade-up" data-aos-duration="500"
+              src="p3.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-              <img src="p4.png" alt="proyecto 1 reference"
+            <img data-aos="fade-up" data-aos-duration="500"
+              src="p4.png" alt="proyecto 1 reference"
+              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+            <img data-aos="fade-up" data-aos-duration="500"
+              src="p5.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
           </div>
 
-          <div className='max-w-5xl w-3/4 justify-center items-center pt-20 border hidden lg:flex'>
-            <div className='relative h-screen w-full border-red-500'>
+          <div className='py-5 w-screen md:hidden'>
+            <div className='flex gap-9 p-9 overflow-x-scroll'>
+              <img src="p4.png" alt=""
+              className='h-[600] bject-contain rounded-[1.5rem] border-[0.5px] border-neutral-600' />
+              <img src="p3.png" alt=""
+              className='h-[600] bject-contain rounded-[1.5rem] border-[0.5px] border-neutral-600' />
+              <img src="p2.png" alt=""
+              className='h-[600] bject-contain rounded-[1.5rem] border-[0.5px] border-neutral-600' />
+              <img src="p5.png" alt=""
+              className='h-[600] bject-contain rounded-[1.5rem] border-[0.5px] border-neutral-600' />
+              <img src="p1.png" alt=""
+              className='h-[600] bject-contain rounded-[1.5rem] border-[0.5px] border-neutral-600' />
+            </div>
 
-              <img src="p4.png" alt="proyecto 1 reference"
+          </div>
+
+          <div className='max-w-5xl w-3/4 justify-center items-center pt-20 hidden lg:flex'>
+            <div className='relative h-[70vh] w-full border'>
+              <img
+                src="p4.png" alt="proyecto 1 reference"
                 className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-0 absolute z-30 duration-500 transition-all 
+                left-0 absolute z-50 duration-500 transition-all 
                 hover:drop-shadow-project hover:shadow-purple-600
                 active:translate-x-[400px]' />
-              <img src="p3.png" alt="proyecto 1 reference"
+              <img
+                src="p2.png" alt="proyecto 1 reference"
                 className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[40px] absolute z-20 duration-500 transition-all 
+                left-[40px] absolute z-40 duration-500 transition-all 
                 hover:drop-shadow-project hover:shadow-purple-600
                 active:translate-x-[360px]' />
-              <img src="p2.png" alt="proyecto 1 reference"
+              <img
+                src="p3.png" alt="proyecto 1 reference"
                 className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[80px] absolute z-10 duration-500 transition-all 
+                left-[80px] absolute z-30 duration-500 transition-all 
                 hover:drop-shadow-project hover:shadow-purple-600
                 active:translate-x-[320px]' />
-                <img src="p1.png" alt="proyecto 1 reference"
+              <img
+                src="p5.png" alt="proyecto 1 reference"
                 className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[120px] absolute z-0 duration-500 transition-all 
+                left-[120px] absolute z-20 duration-500 transition-all 
                 hover:drop-shadow-project hover:shadow-purple-600
                 active:translate-x-[280px]' />
-
+              <img
+                src="p1.png" alt="proyecto 1 reference"
+                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
+                left-[160px] absolute z-10 duration-500 transition-all 
+                hover:drop-shadow-project hover:shadow-purple-600
+                active:translate-x-[240px]' />
             </div>
+
           </div>
 
         </div>
