@@ -71,7 +71,7 @@ export default function Home() {
               data-aos-duration="800"
               //data-aos="fade-up-right"
               src="xcode-logo.png" alt="primer proyecto"
-              className='object-contain w-[4.7rem] h-[4.7rem] hover:scale-105 duration-150 active:opacity-35' />
+              className='object-contain w-[4.7rem] h-[4.7rem] hover:scale-105 duration-150 active:opacity-35 ' />
             <img
               data-aos-duration="800"
               //data-aos="fade-up" 
@@ -96,17 +96,43 @@ export default function Home() {
             Mis proyectos
           </h3>
 
-          <div className='flex flex-wrap pt-20 justify-center gap-5'>
-            <img src="p1.png" alt="proyecto 1 reference" 
-            className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]'/>
-             <img src="p2.png" alt="proyecto 1 reference" 
-            className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]'/>
-             <img src="p3.png" alt="proyecto 1 reference" 
-            className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]'/>
-             
+          <div className='flex flex-wrap pt-20 justify-center gap-5 lg:hidden'>
+            <img src="p1.png" alt="proyecto 1 reference"
+              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+            <img src="p2.png" alt="proyecto 1 reference"
+              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+            <img src="p3.png" alt="proyecto 1 reference"
+              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+              <img src="p4.png" alt="proyecto 1 reference"
+              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
           </div>
 
+          <div className='max-w-5xl w-3/4 justify-center items-center pt-20 border hidden lg:flex'>
+            <div className='relative h-screen w-full border-red-500'>
 
+              <img src="p4.png" alt="proyecto 1 reference"
+                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
+                left-0 absolute z-30 duration-500 transition-all 
+                hover:drop-shadow-project hover:shadow-purple-600
+                active:translate-x-[400px]' />
+              <img src="p3.png" alt="proyecto 1 reference"
+                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
+                left-[40px] absolute z-20 duration-500 transition-all 
+                hover:drop-shadow-project hover:shadow-purple-600
+                active:translate-x-[360px]' />
+              <img src="p2.png" alt="proyecto 1 reference"
+                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
+                left-[80px] absolute z-10 duration-500 transition-all 
+                hover:drop-shadow-project hover:shadow-purple-600
+                active:translate-x-[320px]' />
+                <img src="p1.png" alt="proyecto 1 reference"
+                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
+                left-[120px] absolute z-0 duration-500 transition-all 
+                hover:drop-shadow-project hover:shadow-purple-600
+                active:translate-x-[280px]' />
+
+            </div>
+          </div>
 
         </div>
 

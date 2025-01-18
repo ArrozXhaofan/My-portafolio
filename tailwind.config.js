@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
+
+
 const textShadowPlugin = require('tailwindcss-textshadow');
+
 
 module.exports = {
   content: [
@@ -28,6 +31,13 @@ module.exports = {
       textShadow: {
         glow: '0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 204, 153, 0.6), 0 0 24px rgba(255, 102, 0, 0.8), 0 0 36px rgba(255, 102, 0, 1)',
       },
+      dropShadow: {
+        'project': [
+          '0px 0px 5px rgba(191, 66, 245, 1)',
+          '0px 0px 4px rgba(245, 212, 66, 0.3)',
+        ],
+      },
+
     },
   },
   plugins: [textShadowPlugin],
