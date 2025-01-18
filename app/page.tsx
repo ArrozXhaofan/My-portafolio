@@ -131,7 +131,7 @@ export default function Home() {
           </div>
 
           <div className='max-w-5xl w-3/4 justify-center items-center pt-20 hidden lg:flex'>
-            <div className='relative h-[70vh] w-full border'>
+            <div className='relative h-[70vh] w-full'>
               <img
                 src="p4.png" alt="proyecto 1 reference"
                 className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
