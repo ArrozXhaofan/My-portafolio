@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: "sf-text-medium";
+    src: url(./fonts/Helvetica.ttc);
+}
+
+@font-face {
     font-family: "sf-hello";
     src: url(./fonts/sf-hello.ttf); 
 }

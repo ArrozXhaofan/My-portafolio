@@ -27,9 +27,12 @@ module.exports = {
         "sf-ultrathin": ["sf-ultrathin"],
         "sf-regular-rounded": ["sf-regular-rounded"],
         "sf-semibold-rounded": ["sf-semibold-rounded"],
+        "sf-text-medium": ["sf-text-medium"],
       },
       textShadow: {
         glow: '0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 204, 153, 0.6), 0 0 24px rgba(255, 102, 0, 0.8), 0 0 36px rgba(255, 102, 0, 1)',
+        glowBluePurpleCyan: '0 0 8px rgba(102, 204, 255, 0.8), 0 0 16px rgba(102, 153, 255, 0.6), 0 0 24px rgba(153, 51, 255, 0.8), 0 0 36px rgba(0, 255, 255, 1)',
+
       },
       dropShadow: {
         'project': [
