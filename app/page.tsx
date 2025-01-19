@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import AOS from 'aos'
@@ -18,6 +18,9 @@ export default function Home() {
   const msDurationPrimary = 300
   const animationFirst = "zoom in"
 
+  const [open, setOpen] = useState(false);
+
+
   function smallScrollDown() {
     window.scrollBy({ top: 300, left: 0, behavior: 'smooth' });
   }
@@ -29,6 +32,43 @@ export default function Home() {
   return (
     <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-center cover 
     overflow-hidden relative">
+
+      <nav className={`w-full transition-all duration-500 ease-in-out delay-150 
+      ${open ? 'h-screen':'h-8'} backdrop-blur-md bg-neutral-800 bg-opacity-50 
+       flex-col justify-center items-start top-0 fixed z-10 `} >
+
+        <div className='w-full h-h-8 flex justify-between px-5 items-center p-1'>
+
+          <a href='#' className='font-sf-regular-rounded'>
+            <div className={`flex gap-1 items-center transition-all duration-300  ease-in-out ${open ? 'opacity-0':''}`} >
+              <Image width={15} height={15} src={'/symbols/apple.svg'} alt='apple logo' />
+              <span className={`text-white opacity-85`}>Jeanpiere</span>
+            </div>
+          </a>
+
+          <button onClick={() => setOpen(!open) } className='flex gap-3 justify-center items-center'>
+            <div className="space-y-[6px]">
+              <span className={`transform duration-300 block w-[17px] h-[1.5px] bg-white opacity-85 rounded 
+                ${open ? 'rotate-45 translate-y-[5px]' : ''} `} ></span>
+              <span className={`transform duration-300 block w-[17] h-[1.5px] bg-white opacity-85 rounded
+                 ${open ? '-rotate-45 -translate-y-[2.5px]' : ''} `} ></span>
+            </div>
+          </button>
+
+        </div>
+
+        <div className={`duration-300 delay-150 ${open ? '' : 'opacity-0'}  
+        px-5 text-white text-3xl font-semibold flex flex-col gap-4`}>
+
+          <span className=''>Home</span>
+          <span className=''>Proyectos</span>
+          <span className=''>Habilidades</span>
+          <span className=''>Experiencia</span>
+          <span className=''>Contacto</span>
+          <span className=''>Sobre mi</span>
+        </div>
+
+      </nav>
 
       <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
         <img
@@ -62,7 +102,6 @@ export default function Home() {
       </div>
 
 
-
       <div className='max-w-5xl p-5'>
         <div className=' text-white'>
           <h3 data-aos="fade-left" className='font-sf-semibold-rounded text-2xl md:text-4xl'>
@@ -75,7 +114,6 @@ export default function Home() {
         </div>
         <img src="mac-bg-1p.png" alt="primer proyecto" className=' ' />
       </div>
-
 
 
       <div className='max-w-5xl w-full p-5 md:pt-56 lg:pt-28'>
@@ -201,7 +239,6 @@ export default function Home() {
         </div>
 
       </div>
-
 
       <div className='lg:max-w-5xl w-full  py-16 px-3 md:max-w-2xl flex flex-col gap-16 lg:gap-4 lg:flex-row '>
 
@@ -385,58 +422,58 @@ export default function Home() {
             </div>
 
             <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
-            <Image width={30} height={30} src="/symbols/app.connected.to.app.below.fill.svg" alt="icon skill"
-              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
-              className='pb-3' />
-            <span className=' font-sf-regular-rounded text-md'> Arquitectura Clean clode & MVVM</span>
-            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
-              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
-            </p>
+              <Image width={30} height={30} src="/symbols/app.connected.to.app.below.fill.svg" alt="icon skill"
+                data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+                className='pb-3' />
+              <span className=' font-sf-regular-rounded text-md'> Arquitectura Clean clode & MVVM</span>
+              <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+                Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+              </p>
+            </div>
+
+            <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+              <Image width={30} height={30} src="/symbols/network.svg" alt="icon skill"
+                data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+                className='pb-3' />
+              <span className=' font-sf-regular-rounded text-md'>API request</span>
+              <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+                Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+              </p>
+            </div>
+
+            <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+              <Image width={30} height={30} src="/symbols/testtube.2.svg" alt="icon skill"
+                data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+                className='pb-3' />
+              <span className=' font-sf-regular-rounded text-md'>Testing Unit, Integration, UI</span>
+              <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+                Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+              </p>
+            </div>
+
+            <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+              <Image width={30} height={30} src="/symbols/square.3.layers.3d.down.backward.svg" alt="icon skill"
+                data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+                className='pb-3' />
+              <span className=' font-sf-regular-rounded text-md'>Desarrollo de vistas</span>
+              <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+                Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+              </p>
+            </div>
+
+            <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+              <Image width={50} height={50} src="/symbols/person.3.sequence.svg" alt="icon skill"
+                data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+                className='pb-3' />
+              <span className=' font-sf-regular-rounded text-md'>Planteaniemto de soluciones</span>
+              <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+                Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+              </p>
+            </div>
+
           </div>
 
-          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
-            <Image width={30} height={30} src="/symbols/network.svg" alt="icon skill"
-              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
-              className='pb-3' />
-            <span className=' font-sf-regular-rounded text-md'>API request</span>
-            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
-              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
-            </p>
-          </div>
 
-          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
-            <Image width={30} height={30} src="/symbols/testtube.2.svg" alt="icon skill"
-              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
-              className='pb-3' />
-            <span className=' font-sf-regular-rounded text-md'>Testing Unit, Integration, UI</span>
-            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
-              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
-            </p>
-          </div>
-
-          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
-            <Image width={30} height={30} src="/symbols/square.3.layers.3d.down.backward.svg" alt="icon skill"
-              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
-              className='pb-3' />
-            <span className=' font-sf-regular-rounded text-md'>Desarrollo de vistas</span>
-            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
-              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
-            </p>
-          </div>
-
-          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
-            <Image width={50} height={50} src="/symbols/person.3.sequence.svg" alt="icon skill"
-              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
-              className='pb-3' />
-            <span className=' font-sf-regular-rounded text-md'>Planteaniemto de soluciones</span>
-            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
-              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
-            </p>
-          </div>
-
-          </div>
-
-          
 
         </div>
       </div>
@@ -445,13 +482,9 @@ export default function Home() {
         <button onClick={resetScroll}
           className='select-none 
         hover:scale-95 active:scale-50 transition-all'>
-          <Image width={25} height={25} src='/symbols/arrow.up.circle.svg' alt='flecha'
-          //data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2500" data-aos-offset="0" 
-          />
+          <Image width={25} height={25} src='/symbols/arrow.up.circle.svg' alt='flecha' />
         </button>
-
       </div>
-
 
     </div>
   );
