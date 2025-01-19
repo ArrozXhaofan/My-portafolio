@@ -234,7 +234,7 @@ export default function Home() {
                 <span className=' font-sf-regular-rounded text-2xl'>Swift Data</span>
                 <p className='font-sf-regular-rounded text-sm text-neutral-400'>
                   Amplia experiencia en la creacion de base de datos locales con Swift Data,
-                  la nueva libreria de persistencia de Apple, desde grandes cantidades de datos hasta pequeños CRUD's
+                  la nueva libreria de persistencia de Apple, desde grandes cantidades de datos hasta pequeños CRUDs
                   a eleccion del cliente.
                 </p>
               </div>
@@ -313,7 +313,7 @@ export default function Home() {
                 <span className=' font-sf-regular-rounded text-2xl'>Tailwind CSS</span>
                 <p className='font-sf-regular-rounded text-sm text-neutral-400'>
                   Amplia experiencia en la creacion de base de datos locales con Swift Data,
-                  la nueva libreria de persistencia de Apple, desde grandes cantidades de datos hasta pequeños CRUD's
+                  la nueva libreria de persistencia de Apple, desde grandes cantidades de datos hasta pequeños CRUDs
                   a eleccion del cliente.
                 </p>
               </div>
