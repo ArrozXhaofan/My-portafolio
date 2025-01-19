@@ -34,23 +34,23 @@ export default function Home() {
     overflow-hidden relative">
 
       <nav className={`w-full transition-all duration-500 ease-in-out delay-150 
-      ${open ? 'h-screen':'h-8'} backdrop-blur-md bg-neutral-800 bg-opacity-50 
-       flex-col justify-center items-start top-0 fixed z-10 `} >
+      ${open ? 'h-screen':'h-12'} backdrop-blur-md bg-neutral-800 bg-opacity-50 
+       flex-col justify-center items-center top-0 fixed z-10 `} >
 
-        <div className='w-full h-h-8 flex justify-between px-5 items-center p-1'>
+        <div className='w-full h-12 flex justify-between px-5 items-center p-1'>
 
           <a href='#' className='font-sf-regular-rounded'>
             <div className={`flex gap-1 items-center transition-all duration-300  ease-in-out ${open ? 'opacity-0':''}`} >
-              <Image width={15} height={15} src={'/symbols/apple.svg'} alt='apple logo' />
-              <span className={`text-white opacity-85`}>Jeanpiere</span>
+              <Image width={20} height={20} src={'/symbols/apple.svg'} alt='apple logo' />
+              <span className={`text-white opacity-85 text-lg`}>Jeanpiere</span>
             </div>
           </a>
 
           <button onClick={() => setOpen(!open) } className='flex gap-3 justify-center items-center'>
-            <div className="space-y-[6px]">
-              <span className={`transform duration-300 block w-[17px] h-[1.5px] bg-white opacity-85 rounded 
-                ${open ? 'rotate-45 translate-y-[5px]' : ''} `} ></span>
-              <span className={`transform duration-300 block w-[17] h-[1.5px] bg-white opacity-85 rounded
+            <div className="space-y-[7px]">
+              <span className={`transform duration-300 block w-[20px] h-[2px] bg-white opacity-85 rounded 
+                ${open ? 'rotate-45 translate-y-[6px]' : ''} `} ></span>
+              <span className={`transform duration-300 block w-[20px] h-[2px] bg-white opacity-85 rounded
                  ${open ? '-rotate-45 -translate-y-[2.5px]' : ''} `} ></span>
             </div>
           </button>
