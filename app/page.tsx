@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect } from 'react';
+import Image from 'next/image';
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -14,7 +16,7 @@ export default function Home() {
   }, []);
 
   const msDurationPrimary = 300
-  const animationFirst = "flip-left"
+  const animationFirst = "zoom in"
 
   return (
     <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-center cover 
@@ -191,7 +193,7 @@ export default function Home() {
           <div className='flex flex-col gap-5 px-2'>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/mapkit.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/mapkit.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>MapKit</span>
@@ -203,7 +205,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/corelocation.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/corelocation.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Core Location</span>
@@ -215,7 +217,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/avkit.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/avkit.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>AVKit</span>
@@ -226,7 +228,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/swiftdata.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/swiftdata.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Swift Data</span>
@@ -239,7 +241,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/charts.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/charts.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Charts</span>
@@ -250,7 +252,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4'>
-              <img src="./icons/localauth.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/localauth.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Local Authentication</span>
@@ -270,7 +272,7 @@ export default function Home() {
           <div className='flex flex-col gap-5 px-2'>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/firebase.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/firebase.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Firebase SDK para iOS</span>
@@ -282,7 +284,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/ty.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/ty.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12 rounded-lg' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Typescript</span>
@@ -294,7 +296,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/nextjs.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/nextjs.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>NextJs</span>
@@ -305,7 +307,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/tailwind.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/tailwind.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Tailwind CSS</span>
@@ -318,7 +320,7 @@ export default function Home() {
             </div>
 
             <div className='flex items-start gap-4 '>
-              <img src="./icons/figma.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/figma.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Figma</span>
@@ -332,7 +334,7 @@ export default function Home() {
             <div className='flex items-start justify-start gap-4'>
 
 
-              <img src="./icons/github.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              <Image width={48} height={48} src="/icons/github.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Git & GitHub</span>
