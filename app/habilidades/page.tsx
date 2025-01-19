@@ -1,12 +1,23 @@
 "use client"
 
-import Image from "next/image"
+import { useEffect } from "react"
 
+import Image from "next/image"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Habilidades() {
 
+    useEffect(() => {
+        AOS.init({
+          duration: 3000, // Ajusta la duración si es necesario
+        });
+      }, []);
+
 const msDurationPrimary = 300
   const animationFirst = "zoom in"
+
+  
 
     return (
         <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-start cover 
