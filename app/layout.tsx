@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import Navigatore from "@/Components/Nav/Nav";
+
 export const metadata: Metadata = {
   title: "My Projects",
   description: "Jeanpiere Laura's projects",
@@ -16,11 +18,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         //className={`antialiased`}
       >
-        {children}
+        {
+          <div>
+            <Navigatore/>
+            {
+              children
+            }
+          </div>
+          
+        }
       </body>
     </html>
   );

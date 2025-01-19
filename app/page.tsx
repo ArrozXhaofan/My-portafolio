@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+import { RouteNav, getRoutesNav } from '@/models';
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -15,11 +17,9 @@ export default function Home() {
     });
   }, []);
 
+
   const msDurationPrimary = 300
   const animationFirst = "zoom in"
-
-  const [open, setOpen] = useState(false);
-
 
   function smallScrollDown() {
     window.scrollBy({ top: 300, left: 0, behavior: 'smooth' });
@@ -33,42 +33,7 @@ export default function Home() {
     <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-center cover 
     overflow-hidden relative">
 
-      <nav className={`w-full transition-all duration-500 ease-in-out delay-150 
-      ${open ? 'h-screen':'h-12'} backdrop-blur-md bg-neutral-800 bg-opacity-50 
-       flex-col justify-center items-center top-0 fixed z-10 `} >
 
-        <div className='w-full h-12 flex justify-between px-5 items-center p-1'>
-
-          <a href='#' className='font-sf-regular-rounded'>
-            <div className={`flex gap-1 items-center transition-all duration-300  ease-in-out ${open ? 'opacity-0':''}`} >
-              <Image width={20} height={20} src={'/symbols/apple.svg'} alt='apple logo' />
-              <span className={`text-white opacity-85 text-lg`}>Jeanpiere</span>
-            </div>
-          </a>
-
-          <button onClick={() => setOpen(!open) } className='flex gap-3 justify-center items-center'>
-            <div className="space-y-[7px]">
-              <span className={`transform duration-300 block w-[20px] h-[2px] bg-white opacity-85 rounded 
-                ${open ? 'rotate-45 translate-y-[6px]' : ''} `} ></span>
-              <span className={`transform duration-300 block w-[20px] h-[2px] bg-white opacity-85 rounded
-                 ${open ? '-rotate-45 -translate-y-[2.5px]' : ''} `} ></span>
-            </div>
-          </button>
-
-        </div>
-
-        <div className={`duration-300 delay-300 ${open ? '' : 'opacity-0'}  
-         text-white text-3xl font-semibold flex flex-col select-none`}>
-
-          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Home</span>
-          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Proyectos</span>
-          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Habilidades</span>
-          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Experiencia</span>
-          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Contacto</span>
-          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Sobre mi</span>
-        </div>
-
-      </nav>
 
       <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
         <img
