@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navigatore from "@/Components/Nav/Nav";
+import Navigatore from "@/app/Components/Nav/Nav";
 
 export const metadata: Metadata = {
   title: "My Projects",
@@ -23,8 +23,10 @@ export default function RootLayout({
       //className={`antialiased`}
       >
         {
-          <div className=" min-h-screen min-w-screen max-w-screen  bg-black flex flex-col items-center justify-start cover 
-        overflow-hidden relative pt-12">
+          <div className=" 
+          min-h-screen min-w-screen max-w-screen  bg-black
+           flex flex-col items-center justify-center  
+          overflow-hidden relative">
 
             <Navigatore />
 
