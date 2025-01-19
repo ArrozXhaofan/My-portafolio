@@ -19,7 +19,7 @@ export default function Navigatore() {
         
                 <div className='w-full h-12 flex justify-between px-5 items-center p-1'>
         
-                  <a href='#' className='font-sf-regular-rounded'>
+                  <a href='#' className='font-sf-regular-rounded p-5'>
                     <div className={`flex gap-1 items-center transition-all duration-300  ease-in-out ${open ? 'opacity-0' : ''}`} >
                       <Image width={20} height={20} src={'/symbols/apple.svg'} alt='apple logo' />
                       <span className={`text-white opacity-85 text-lg`}>Jeanpiere</span>

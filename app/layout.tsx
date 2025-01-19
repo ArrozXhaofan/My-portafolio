@@ -20,16 +20,18 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        //className={`antialiased`}
+      //className={`antialiased`}
       >
         {
-          <div>
-            <Navigatore/>
+          <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-start cover 
+        overflow-hidden relative pt-12">
+          
+            <Navigatore />
             {
               children
             }
           </div>
-          
+
         }
       </body>
     </html>
