@@ -30,7 +30,7 @@ export default function Home() {
   return (
 
     <>
-    <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative border">
+    <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
         <img
           data-aos-delay="1000" data-aos-duration="3000" data-aos="fade up"
           src="hello1.png" alt="Frase inial"
