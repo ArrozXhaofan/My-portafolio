@@ -57,15 +57,15 @@ export default function Home() {
 
         </div>
 
-        <div className={`duration-300 delay-150 ${open ? '' : 'opacity-0'}  
-        px-5 text-white text-3xl font-semibold flex flex-col gap-4`}>
+        <div className={`duration-300 delay-300 ${open ? '' : 'opacity-0'}  
+         text-white text-3xl font-semibold flex flex-col select-none`}>
 
-          <span className=''>Home</span>
-          <span className=''>Proyectos</span>
-          <span className=''>Habilidades</span>
-          <span className=''>Experiencia</span>
-          <span className=''>Contacto</span>
-          <span className=''>Sobre mi</span>
+          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Home</span>
+          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Proyectos</span>
+          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Habilidades</span>
+          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Experiencia</span>
+          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Contacto</span>
+          <span className='active:bg-neutral-700 active:text-neutral-400 transition-colors duration-[100ms] ease-in p-2 px-5'>Sobre mi</span>
         </div>
 
       </nav>
