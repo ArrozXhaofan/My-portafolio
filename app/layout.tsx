@@ -23,10 +23,11 @@ export default function RootLayout({
       //className={`antialiased`}
       >
         {
-          <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-start cover 
+          <div className=" min-h-screen min-w-screen max-w-screen  bg-black flex flex-col items-center justify-start cover 
         overflow-hidden relative pt-12">
-          
+
             <Navigatore />
+
             {
               children
             }
