@@ -18,12 +18,22 @@ export default function Home() {
   const msDurationPrimary = 300
   const animationFirst = "zoom in"
 
+  function smallScrollDown() {
+    window.scrollBy({ top: 300, left: 0, behavior: 'smooth' });
+  }
+
+  function resetScroll() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
+
   return (
     <div className=" min-h-screen min-w-screem max-w-screen  bg-black flex flex-col items-center justify-center cover 
-    overflow-hidden">
+    overflow-hidden relative">
 
-      <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center">
-        <img data-aos-delay="1000" data-aos-duration="3000" data-aos="fade up" src="hello1.png" alt="Frase inial"
+      <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
+        <img
+          data-aos-delay="1000" data-aos-duration="3000" data-aos="fade up"
+          src="hello1.png" alt="Frase inial"
           className='object-contain w-[250px] h-[120px] pointer-events-none select-none' />
         <div className='flex flex-col gap-0 items-center'>
           <h1
@@ -40,6 +50,15 @@ export default function Home() {
             iOS Developer
           </h1>
         </div>
+
+        <button onClick={smallScrollDown}
+          className='select-none bottom-20  md:bottom-5 absolute  
+        hover:scale-95 active:scale-50 transition-all'>
+          <Image width={25} height={25} src='/symbols/arrow.down.circle.svg' alt='flecha'
+            data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2500" data-aos-offset="0" />
+        </button>
+
+
       </div>
 
 
@@ -321,7 +340,7 @@ export default function Home() {
 
             <div className='flex items-start gap-4 '>
               <Image width={48} height={48} src="/icons/figma.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
-                className=' w-12' />
+                className='w-12' />
               <div className='flex flex-col gap-2 text-white'>
                 <span className=' font-sf-regular-rounded text-2xl'>Figma</span>
                 <p className='font-sf-regular-rounded text-sm text-neutral-400'>
@@ -332,8 +351,6 @@ export default function Home() {
             </div>
 
             <div className='flex items-start justify-start gap-4'>
-
-
               <Image width={48} height={48} src="/icons/github.png" alt="icon skill" data-aos={animationFirst} data-aos-duration={msDurationPrimary}
                 className=' w-12' />
               <div className='flex flex-col gap-2 text-white'>
@@ -346,10 +363,94 @@ export default function Home() {
 
           </div>
         </div>
-        
+
       </div>
 
+      <div className='lg:max-w-4xl w-full  py-16 px-3 md:max-w-2xl flex flex-col gap-16 lg:gap-4 lg:flex-row '>
+        <div className='flex flex-col w-full justify-center items-center gap-10'>
+          <h4 className='text-white font-bold text-4xl pb-10'>
+            Experiencia tecnica
+          </h4>
 
+          <div className='flex flex-col md:flex-row gap-14 flex-wrap items-center justify-center'>
+
+            <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+              <Image width={30} height={30} src="/symbols/shippingbox.svg" alt="icon skill"
+                data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+                className='pb-3' />
+              <span className=' font-sf-regular-rounded text-md'>SDK & Packets Manager</span>
+              <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+                Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+              </p>
+            </div>
+
+            <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+            <Image width={30} height={30} src="/symbols/app.connected.to.app.below.fill.svg" alt="icon skill"
+              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              className='pb-3' />
+            <span className=' font-sf-regular-rounded text-md'> Arquitectura Clean clode & MVVM</span>
+            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+            <Image width={30} height={30} src="/symbols/network.svg" alt="icon skill"
+              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              className='pb-3' />
+            <span className=' font-sf-regular-rounded text-md'>API request</span>
+            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+            <Image width={30} height={30} src="/symbols/testtube.2.svg" alt="icon skill"
+              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              className='pb-3' />
+            <span className=' font-sf-regular-rounded text-md'>Testing Unit, Integration, UI</span>
+            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+            <Image width={30} height={30} src="/symbols/square.3.layers.3d.down.backward.svg" alt="icon skill"
+              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              className='pb-3' />
+            <span className=' font-sf-regular-rounded text-md'>Desarrollo de vistas</span>
+            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center text-white text-center gap-2'>
+            <Image width={50} height={50} src="/symbols/person.3.sequence.svg" alt="icon skill"
+              data-aos={animationFirst} data-aos-duration={msDurationPrimary}
+              className='pb-3' />
+            <span className=' font-sf-regular-rounded text-md'>Planteaniemto de soluciones</span>
+            <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
+              Experiencia en implementacion de accesos con datos biometricos del usuario como FaceID o TouchID.
+            </p>
+          </div>
+
+          </div>
+
+          
+
+        </div>
+      </div>
+
+      <div className='p-10'>
+        <button onClick={resetScroll}
+          className='select-none 
+        hover:scale-95 active:scale-50 transition-all'>
+          <Image width={25} height={25} src='/symbols/arrow.up.circle.svg' alt='flecha'
+          //data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2500" data-aos-offset="0" 
+          />
+        </button>
+
+      </div>
 
 
     </div>
