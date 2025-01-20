@@ -8,9 +8,9 @@ export interface RouteNav {
 export function getRoutesNav() : RouteNav[] {
 
     const data = [
-        {title: 'Home', path: '/'},
-        {title: 'Proyectos', path: '/proyectos'},
+        {title: 'Inicio', path: '/'},
         {title: 'Habilidades', path: '/habilidades'},
+        {title: 'Proyectos', path: '/proyectos'},
         {title: 'Experiencia', path: '/experiencia'},
         {title: 'Contacto', path: '/contacto'},
         {title: 'Sobre mi', path: '/about'}

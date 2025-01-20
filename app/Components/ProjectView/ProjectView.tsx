@@ -5,19 +5,10 @@ import Image from "next/image";
 
 
 interface Props {
-    data: ProjectModel
+    dato: ProjectModel
 }
 
-export default function ProjectView({ data }: Props) {
-
-    const dato: ProjectModel = {
-        title: 'Segundo Projecto',
-        description: 'Este es mi projecto numero uno qeue necesito para mostrasl los que puedo haer yed t no se qumasl para demosdsrer fdsfgtg hgh pequeña descriopcion de mi proee fd proyecto fsdf gfg f',
-        imgReferences: ['/projects/p1.png','/projects/p1.png','/projects/p1.png'],
-        githubRepository: 'https://www.instagram.com/direct/inbox/',
-        reverse: false
-    }
-
+export default function ProjectView({ dato }: Props) {
 
     return (
 
