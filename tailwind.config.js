@@ -15,6 +15,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'accent': '#007aff'
+      },
       fontFamily: {
         "sf-hello": ["sf-hello"],
         "sf-black": ["sf-black"],
@@ -37,6 +40,10 @@ module.exports = {
         'project': [
           '0px 0px 5px rgba(191, 66, 245, 1)',
           '0px 0px 4px rgba(245, 212, 66, 0.3)',
+        ],
+        'project-cyan': [
+          '0px 0px 8px rgba(223, 102, 255, 1)',  // Más brillante y rosado
+          '0px 0px 6px rgba(66, 173, 245, 0.5)',  // Más azul con mayor opacidad
         ],
       },
 
