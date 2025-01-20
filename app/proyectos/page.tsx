@@ -1,6 +1,5 @@
 "use client"
 
-import { ProjectModel } from "@/models";
 import Image from "next/image";
 import { useEffect } from 'react';
 
