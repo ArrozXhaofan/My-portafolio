@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import ScrollDownButton from './Components/ScrollButtons/ScrollDownButton';
+import ScrollUpButton from './Components/ScrollButtons/ScrollUpButton';
 
 
 export default function Home() {
@@ -15,17 +17,8 @@ export default function Home() {
     });
   }, []);
 
-
   const msDurationPrimary = 300
   const animationFirst = "zoom in"
-
-  function smallScrollDown() {
-    window.scrollBy({ top: 300, left: 0, behavior: 'smooth' });
-  }
-
-  function resetScroll() {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-  }
 
   return (
 
@@ -51,12 +44,7 @@ export default function Home() {
           </h1>
         </div>
 
-        <button onClick={smallScrollDown}
-          className='select-none bottom-20  md:bottom-5 absolute  
-        hover:scale-95 active:scale-50 transition-all'>
-          <Image width={25} height={25} src='/symbols/arrow.down.circle.svg' alt='flecha'
-            data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2500" data-aos-offset="0" />
-        </button>
+        <ScrollDownButton scroll={500} />
 
 
       </div>
@@ -152,49 +140,6 @@ export default function Home() {
             </div>
 
           </div>
-
-
-          {
-            /*
-            <div className='max-w-5xl w-3/4 justify-center items-center pt-20 hidden lg:flex'>
-            <div className='relative h-auto  w-full'>
-              <img
-                src="./proyects/p4.png" alt="proyecto 1 reference"
-                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-0 absolute z-50 duration-500 transition-all 
-                hover:drop-shadow-project hover:shadow-purple-600
-                active:translate-x-[400px]' />
-              <img
-                src="./proyects/p2.png" alt="proyecto 1 reference"
-                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[40px] absolute z-40 duration-500 transition-all 
-                hover:drop-shadow-project hover:shadow-purple-600
-                active:translate-x-[360px]' />
-              <img
-                src="./proyects/p3.png" alt="proyecto 1 reference"
-                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[80px] absolute z-30 duration-500 transition-all 
-                hover:drop-shadow-project hover:shadow-purple-600
-                active:translate-x-[320px]' />
-              <img
-                src="./proyects/p5.png" alt="proyecto 1 reference"
-                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[120px] absolute z-20 duration-500 transition-all 
-                hover:drop-shadow-project hover:shadow-purple-600
-                active:translate-x-[280px]' />
-              <img
-                src="./proyects/p1.png" alt="proyecto 1 reference"
-                className='rounded-[1.5rem] border-[0.5px] border-neutral-600 w-[230px] object-contain
-                left-[160px] absolute z-10 duration-500 transition-all 
-                hover:drop-shadow-project hover:shadow-purple-600
-                active:translate-x-[240px]' />
-            </div>
-
-          </div>
-            
-            */
-          }
-
 
         </div>
 
@@ -439,11 +384,7 @@ export default function Home() {
       </div>
 
       <div className='p-10'>
-        <button onClick={resetScroll}
-          className='select-none 
-        hover:scale-95 active:scale-50 transition-all'>
-          <Image width={25} height={25} src='/symbols/arrow.up.circle.svg' alt='flecha' />
-        </button>
+        <ScrollUpButton/>
       </div>
     </>
 

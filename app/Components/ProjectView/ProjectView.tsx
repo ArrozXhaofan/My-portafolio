@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react";
 import { ProjectModel } from "@/models";
-
 import Image from "next/image";
+
 
 interface Props {
     data: ProjectModel
@@ -11,86 +10,61 @@ interface Props {
 
 export default function ProjectView({ data }: Props) {
 
-    const [coordinate, setCoordinate] = useState(0)
-    const [scrollIndex, setScrollIndex] = useState(2)
-
-    const max = data.imgReferences.length
-
-    function prevScroll() {
-        if (scrollIndex <= 1) {
-            //console.log('minimo')
-        } else {
-            setScrollIndex(scrollIndex - 1)
-            setCoordinate(coordinate + 315)
-        }
+    const dato: ProjectModel = {
+        title: 'Segundo Projecto',
+        description: 'Este es mi projecto numero uno qeue necesito para mostrasl los que puedo haer yed t no se qumasl para demosdsrer fdsfgtg hgh pequeña descriopcion de mi proee fd proyecto fsdf gfg f',
+        imgReferences: ['/projects/p1.png','/projects/p1.png','/projects/p1.png'],
+        githubRepository: 'https://www.instagram.com/direct/inbox/',
+        reverse: false
     }
 
-    function nextScroll() {
-
-        if (scrollIndex >= max) {
-           //console.log('maximo')
-        } else {
-            setScrollIndex(scrollIndex + 1)
-            setCoordinate(coordinate - 315)
-        }
-    }
 
     return (
 
-        <div className="max-w-4xl w-full flex flex-col md:flex-row ">
-
-            <div className="lg:w-1/2 flex flex-col">
-
-                <div style={{transform: `translateX(${coordinate}px)`}}
-                className={`flex items-center duration-500 delay-150 ease-in-out justify-center gap-5 
-                    md:gap-2
-                `}>
-                    {
-                        data.imgReferences.map((imgUrl, index) => (
-                            <Image width={300} height={200} src={imgUrl} alt="Project Image" key={index}
-                                className={`${scrollIndex == index ? 'opacity-20' : 'opacity-100'}
-                                    rounded-[45px] border-[0.5px] border-neutral-700 transition-all duration-300
-                                    md:w-28 md:rounded-[17px]`}
-                            />
-                        ))
-                    }
-                </div>
-
-            {/*Scroll buttons */}
-                <div className="flex gap-28 select-none md:hidden items-center justify-center py-10 border">
-
-                <button onClick={()=> prevScroll()} className="a">
-                        <div className={`
-                        ${scrollIndex <= 1 ? 'opacity-20' : 'group active:bg-neutral-800 active:border-[0.5px] '}
-                        rounded-full w-[45px] h-[45px]  border-neutral-600 transition-all
-                        flex justify-center items-center duration-50 ease-in-out`}>
-                            <Image width={20} height={20} src='/symbols/chevron.left.svg' alt="prev image" 
-                                className="group-active:scale-95 duration-50"
-                            />
-
-                        </div>
-                    </button>
-
-                    <button onClick={()=> nextScroll()} className="a">
-                        <div className={`
-                        ${scrollIndex >= max ? 'opacity-20' : 'group active:bg-neutral-800 active:border-[0.5px] '}
-                        rounded-full w-[45px] h-[45px]  border-neutral-600 transition-all
-                        flex justify-center items-center duration-50 ease-in-out`}>
-                            <Image width={20} height={20} src='/symbols/chevron.right.svg' alt="prev image" 
-                                className="group-active:scale-95 duration-50"
-                            />
-
-                        </div>
-                    </button>
-
-                </div>
-
+        <div className={`flex flex-col  justify-center items-center gap-10 py-20 
+                            ${dato.reverse ? 'lg:flex-row-reverse': 'lg:flex-row'} lg:items-start lg:gap-20
+                        `}>
+            <div className="flex flex-col items-center gap-6 
+                                lg:w-[50%] lg:h-full lg:items-start 
+                            ">
+                <span className="text-3xl font-bold text-white">{dato.title}</span>
+                <p className="text-gray-300 text-sm text-center px-5
+                                    md:max-w-[500px] lg:text-start lg:px-0">
+                    {dato.description}
+                </p>
+                <a href={dato.githubRepository} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover:underline">
+                    <span className="text-accent text-sm hover:underline">Ver repositorio</span>
+                    <Image width={12} height={12} src={'/symbols/arrow.up.right.square.svg'} alt="icon"
+                    />
+                </a>
             </div>
-    
-            <div className="lg:w-1/2 ">
-                <span>projexts images</span>
 
+            <div className=" flex justify-center items-center group hover:drop-shadow-project duration-700">
+                <Image
+                    width={170} height={0} src={'/proyects/p1.png'} alt="proyecto 1"
+                    className={`border-[0.5px] border-neutral-500 transition-all duration-700 ease-in-out
+                                    hover:drop-shadow-project-cyan 
+                                    z-0 translate-x-28 hover:translate-x-[100px]  group-hover:translate-x-20
+                                     rounded-[1.5rem]  cursor-pointer`}
+                />
+                <Image
+                    width={170} height={0} src={'/proyects/p4.png'} alt="proyecto 1"
+                    className={`border-[0.5px] border-neutral-500 transition-all duration-700 ease-in-out
+                                        hover:drop-shadow-project-cyan group-hover:scale-105
+                                        
+                                        rounded-[1.5rem] z-10 cursor-pointer`}
+                />
+                <Image
+                    width={170} height={0} src={'/proyects/p5.png'} alt="proyecto 1"
+                    className={`border-[0.5px] border-neutral-500 transition-all duration-700 ease-in-out
+                                    hover:drop-shadow-project-cyan 
+                                    z-0 -translate-x-28 hover:-translate-x-[100px]  group-hover:-translate-x-20
+                                    rounded-[1.5rem]  cursor-pointer`}
+                />
             </div>
+
+
 
         </div>
 
