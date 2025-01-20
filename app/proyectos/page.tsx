@@ -17,7 +17,7 @@ export default function Proyectos() {
     }, []);
 
 
-    const prop: ProjectModel = {
+    /*const prop: ProjectModel = {
         title: "Projecto 1",
         description: "Este es mi projecto numero uno qeue necesito para mostrasl los que puedo haer yed t no se qumasl",
         imgReferences: [
@@ -27,7 +27,7 @@ export default function Proyectos() {
 
         ],
         githubRepository: 'https://github.com/ArrozXhaofan/My-portafolio'
-    }
+    }*/
 
 
 

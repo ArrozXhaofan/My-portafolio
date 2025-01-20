@@ -14,7 +14,7 @@ export default function ProjectView({ data }: Props) {
     const [coordinate, setCoordinate] = useState(0)
     const [scrollIndex, setScrollIndex] = useState(2)
 
-    let max = data.imgReferences.length
+    const max = data.imgReferences.length
 
     function prevScroll() {
         if (scrollIndex <= 1) {
