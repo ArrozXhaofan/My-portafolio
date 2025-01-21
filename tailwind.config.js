@@ -16,7 +16,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent': '#007aff'
+        'accent': '#007aff',
+        'secodary': '#1C1C1C',
+        'sf-gray': '#A1A1A6'
       },
       fontFamily: {
         "sf-hello": ["sf-hello"],
