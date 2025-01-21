@@ -53,10 +53,9 @@ export default function ExperienciaView() {
                 //              INSERTE MAP PROJECTS
             }
 
-                <div className='w-full flex flex-col justify-center items-center
-             bg-secodary py-9 gap-12'>
+                <div className='w-full flex flex-col justify-center items-center bg-secodary py-9 gap-12'>
 
-                    <Image width={245} height={0} src={'/exp-p2.png'} alt='oasf' />
+                    <Image width={245} height={150} src={'/exp-p2.png'} alt='oasf' />
 
                     <div className='flex flex-col gap-1 justify-center items-center'>
                         <span className='font-sf-semibold text-sf-gray text-'>Max Printers</span>
@@ -121,8 +120,7 @@ export default function ExperienciaView() {
                     </div>
                 </div>
 
-                <div className='w-full flex flex-col justify-center items-center
-             bg-secodary py-9 gap-12'>
+                <div className='w-full flex flex-col justify-center items-center bg-secodary py-9 gap-12'>
 
                     <Image width={245} height={0} src={'/exp-p2.png'} alt='oasf' />
 
@@ -140,9 +138,9 @@ export default function ExperienciaView() {
                         md:justify-center'>
 
                         <div className='flex flex-col items-center gap-[30px] relative '>
-                            <div className='absolute z-10 top-[15]'>
-                                <div className='h-[60] w-[1] top-[15] bg-gray-800'></div>
-                                <div className='h-[60] w-[1] top-[15] bg-gray-800'></div>
+                            <div className='absolute z-10 top-[15px]'>
+                                <div className='h-[60px] w-[1px] top-[15px] bg-gray-800'></div>
+                                <div className='h-[60px] w-[1px] top-[15px] bg-gray-800'></div>
                             </div>
                             <div className='w-[30px] h-[30px] flex justify-center items-center rounded-full bg-gray-800 z-20'>
                                 <Image width={15} height={15} src={'/symbols/square.fill.text.grid.1x2.svg'} alt='icon'
@@ -158,11 +156,11 @@ export default function ExperienciaView() {
                             </div>
                         </div>
 
-                        <div className=' h-full flex flex-col gap-[15]'>
+                        <div className=' h-full flex flex-col gap-[15px]'>
                             <div className='h-fit'>
                                 <span className='text-blue-500 text-sm'>Creating and combinin views</span>
 
-                                <span className='text-sf-gray flex gap-[8]'>
+                                <span className='text-sf-gray flex gap-[8px]'>
                                     <Image width={12} height={12} src={'/symbols/timer.svg'} alt='icon timer' />
                                     <span className='font-light text-[0.8rem]'>7meses</span>
                                 </span>
@@ -170,7 +168,7 @@ export default function ExperienciaView() {
                             <div className=' h-fit'>
                                 <span className='text-blue-500 text-sm'>Creating and combinin views</span>
 
-                                <span className='text-sf-gray flex gap-[8]'>
+                                <span className='text-sf-gray flex gap-[8px]'>
                                     <Image width={12} height={12} src={'/symbols/timer.svg'} alt='icon timer' />
                                     <span className='font-light text-[0.8rem]'>7meses</span>
                                 </span>
@@ -179,7 +177,7 @@ export default function ExperienciaView() {
                             <div className=' h-fit'>
                                 <span className='text-blue-500 text-sm'>Creating and combinin views</span>
 
-                                <span className='text-sf-gray flex gap-[8]'>
+                                <span className='text-sf-gray flex gap-[8px]'>
                                     <Image width={12} height={12} src={'/symbols/timer.svg'} alt='icon timer' />
                                     <span className='font-light text-[0.8rem]'>7meses</span>
                                 </span>
