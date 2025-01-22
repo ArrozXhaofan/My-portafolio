@@ -8,7 +8,6 @@ import 'aos/dist/aos.css'
 import ScrollDownButton from './Components/ScrollButtons/ScrollDownButton';
 import ScrollUpButton from './Components/ScrollButtons/ScrollUpButton';
 import Navigatore from './Components/Nav/Nav';
-import Footer from './Components/Footer/Footer';
 
 
 export default function Home() {

@@ -29,7 +29,7 @@ export default function Navigatore({ data }: Props) {
 
   useEffect(() => {
     if (data != null) {
-      let index = `h-[${data.items.length * 80}px]`;
+      const index = `h-[${data.items.length * 80}px]`;
       setHeight(index);  // Esto solo se ejecuta cuando `data` cambia.
     }
   }, [data])
