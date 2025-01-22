@@ -1,6 +1,5 @@
 "use client"
 
-import React, { useState } from 'react'
 import Image from 'next/image'
 import Navigatore, { SubNavConfiguration } from '../Components/Nav/Nav'
 import ExpCard, { ExpModel } from '../Components/ExpCard/ExpCard'
