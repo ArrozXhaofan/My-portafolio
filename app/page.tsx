@@ -7,6 +7,9 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ScrollDownButton from './Components/ScrollButtons/ScrollDownButton';
 import ScrollUpButton from './Components/ScrollButtons/ScrollUpButton';
+import Navigatore from './Components/Nav/Nav';
+import { SubNavConfiguration } from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer';
 
 
 export default function Home() {
@@ -20,9 +23,14 @@ export default function Home() {
   const msDurationPrimary = 300
   const animationFirst = "zoom in"
 
+  
+
   return (
 
     <>
+
+    <Navigatore />
+
     <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
         <img
           data-aos-delay="1000" data-aos-duration="3000" data-aos="fade up"
@@ -386,6 +394,8 @@ export default function Home() {
       <div className='p-10'>
         <ScrollUpButton/>
       </div>
+
+      <Footer/>
     </>
 
       

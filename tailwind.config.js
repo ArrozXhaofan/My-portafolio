@@ -22,8 +22,6 @@ module.exports = {
       },
       fontFamily: {
         "sf-hello": ["sf-hello"],
-        "sf-black": ["sf-black"],
-        "sf-bold": ["sf-bold"],
         "sf-medium": ["sf-medium"],
         "sf-regular": ["sf-regular"],
         "sf-semibold": ["sf-semibold"],
@@ -32,6 +30,7 @@ module.exports = {
         "sf-regular-rounded": ["sf-regular-rounded"],
         "sf-semibold-rounded": ["sf-semibold-rounded"],
         "sf-text-medium": ["sf-text-medium"],
+        "hel-neue": ["hel-neue", "sans-serif"]
       },
       textShadow: {
         glow: '0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 204, 153, 0.6), 0 0 24px rgba(255, 102, 0, 0.8), 0 0 36px rgba(255, 102, 0, 1)',

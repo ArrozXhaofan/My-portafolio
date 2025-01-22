@@ -4,13 +4,23 @@ import { RouteNav, getRoutesNav } from '@/models';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function Navigatore() {
+export interface SubNavConfiguration {
+  title: string
+  items: string[]
+}
+
+ interface Props {
+  data?: SubNavConfiguration
+}
+
+export default function Navigatore({ data }: Props) {
 
   const routesNavs: RouteNav[] = getRoutesNav()
 
-  const [open, setOpen] = useState(false);
-  const [isOnContact, getIsOnContact] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [subOpen, setSubOpen] = useState(false)
 
+  const [isOnContact, getIsOnContact] = useState(false)
   const [isPhone, getIsPhone] = useState(false)
   const [isMail, getIsMail] = useState(false)
 
@@ -18,30 +28,47 @@ export default function Navigatore() {
     getIsPhone(!isPhone)
     getIsMail(false)
   }
-
   function clickToMail() {
     getIsMail(!isMail)
     getIsPhone(false)
   }
-
   function clickContact() {
     getIsOnContact(!isOnContact)
     getIsMail(false)
     getIsPhone(false)
   }
-
   function clickIsOpen() {
     setOpen(!open)
+    setSubOpen(false)
     getIsOnContact(false)
     getIsMail(false)
     getIsPhone(false)
   }
+  function clickSubOpen() {
+    setSubOpen(!subOpen)
+    setOpen(false)
+  }
+
+  function scrollToElement(id:string) {
+    const element = document.getElementById(id);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    } else {
+      console.error(`No se encontró el elemento con id: ${id}`);
+    }
+    setSubOpen(!subOpen)
+  }
+
+  
 
   return (
-    <div className='fixed top-0 w-screen z-30 select-none'>
+    <div className='fixed top-0 w-screen z-40 select-none'>
 
+      {/*SMALL SCREENS NAV*/}
       <nav className={`w-screen transition-all duration-500 ease-in-out delay-150 lg:hidden 
-              ${open ? 'h-screen' : 'h-12'} backdrop-blur-md bg-neutral-800 bg-opacity-50 top-0 z-10 select-none relative `} >
+              ${open ? 'h-screen' : 'h-12'} backdrop-blur-md bg-neutral-800 bg-opacity-50 top-0 z-10 select-none relative
+              overflow-hidden `} >
 
         <div className='w-full h-12 flex justify-between px-5 items-center p-1  absolute z-20'>
 
@@ -66,7 +93,7 @@ export default function Navigatore() {
 
         <div className={` duration-500 ${open ? 'delay-0' : 'delay-500  -translate-y-full'}
         absolute top-12 w-full h-screen
-                 text-white text-3xl font-semibold flex flex-col select-none  z-70`}>
+                 text-white text-3xl font-semibold flex flex-col select-none gap-1 z-70`}>
           {
             routesNavs.map(route => (
               <a href={route.path} key={route.path}
@@ -78,31 +105,32 @@ export default function Navigatore() {
             ))
           }
 
-          <button onClick={()=> clickContact()}
-                className={` ${open ? 'opacity-100 delay-[300ms]' : 'opacity-0 delay-[0ms]'}
+          <button onClick={() => clickContact()}
+            className={` ${open ? 'opacity-100 delay-[300ms]' : 'opacity-0 delay-[0ms]'}
                    active:bg-neutral-700 active:text-neutral-400  
-                    transition-all duration-[200ms] ease-in p-2 px-5 flex justify-start`}>
+                    transition-all duration-[200ms] ease-in p-2 px-5 flex justify-start
+                    ${isOnContact ? ' text-neutral-600' : ''}`}>
             Contacto
           </button>
 
-          <div className={`flex flex-col px-14 gap-5 pt-2 text-gray-400 
+          <div className={`flex flex-col px-14 gap-5 pt-2 
             ${open ? 'opacity-100 delay-[300ms]' : 'opacity-0 delay-[0ms]'}`}>
-              <a href="https://www.linkedin.com/in/jeanpiere-laura-lobreguez-815318185/" target='_blank' 
-                className={` ${isOnContact?'opacity-100':'-translate-x-56 opacity-0'} transition-all duration-700 delay-[100ms]`}>
-                Linkendln
-              </a>
-              <a href={'https://wa.me/+393282045613'} target='_blank'
-                className={` ${isOnContact?'':'-translate-x-56'} transition-all duration-700 delay-[150ms]`}>
-                Whatsapp
-              </a>
-              <a href="mailto:jean.ganador12@gmail.com"
-                className={` ${isOnContact?'':'-translate-x-56'} transition-all duration-700 delay-[200ms]`}>
-                Correo
-              </a>
-              <a href='tel:+51946272030'
-                className={` ${isOnContact?'':'-translate-x-56'} transition-all duration-700 delay-[250ms]`}>
-                Telefono
-              </a>
+            <a href="https://www.linkedin.com/in/jeanpiere-laura-lobreguez-815318185/" target='_blank'
+              className={` ${isOnContact ? 'opacity-100' : '-translate-x-56 opacity-0 w-min'} transition-all duration-700 delay-[100ms]`}>
+              Linkendln
+            </a>
+            <a href={'https://wa.me/+393282045613'} target='_blank'
+              className={` ${isOnContact ? 'opacity-100' : '-translate-x-56 opacity-0 w-min'} transition-all duration-700 delay-[150ms]`}>
+              Whatsapp
+            </a>
+            <a href="mailto:jean.ganador12@gmail.com"
+              className={` ${isOnContact ? 'opacity-100' : '-translate-x-56 opacity-0 w-min'} transition-all duration-700 delay-[200ms]`}>
+              Correo
+            </a>
+            <a href='tel:+51946272030'
+              className={` ${isOnContact ? 'opacity-100' : '-translate-x-56 opacity-0 w-min'} transition-all duration-700 delay-[250ms]`}>
+              Telefono
+            </a>
 
           </div>
 
@@ -110,12 +138,8 @@ export default function Navigatore() {
 
       </nav>
 
-      {
-        //OTHER DIV
-      }
-
-
-      <nav className={`w-full h-7 backdrop-blur-md bg-neutral-800 bg-opacity-50 hidden lg:flex
+      {/*BIG SCREENS NAV*/}
+      <nav className={`w-full h-7 backdrop-blur-lg bg-neutral-800 bg-opacity-50 hidden lg:flex
                justify-center items-center top-0 absolute z-10 select-none`} >
 
         <div className={`text-white opacity-85 font-sf-thin text-xs max-w-2xl flex gap-6 items-center 
@@ -190,7 +214,48 @@ export default function Navigatore() {
 
 
       </nav>
+
+      {/** SUBNAV */}
+      <nav className={` ${data ? '' : 'hidden'}
+                      w-screen backdrop-blur-md bg-white bg-opacity-60 flex flex-col justify-start  
+                      items-center px-10 border-b-[0.5px] border-neutral-500 top-12 lg:top-7 absolute
+                      transition-all duration-300 delay-[175ms] ${subOpen ? 'h-[20vh] ' : 'h-10'}`}>
+
+        <div className='w-full h-10 max-w-lg flex justify-between items-center absolute px-9'>
+          <span className='font-medium'>{data?.title}</span>
+          <span className='flex justify-center items-center'>
+
+            <button onClick={() => clickSubOpen()} className='p-2'>
+              <Image width={15} height={15} src={'/symbols/chevron.up.svg'} alt='chevron'
+                className={`transition-all duration-700 ease-in-out ${subOpen ? '' : 'scale-y-[-1]'}`}
+              />
+            </button>
+
+          </span>
+        </div>
+
+        <div className={`
+        min-h-4 w-full max-w-lg flex flex-col font-hel-neue text-sm gap-3 mt-7 py-5 px-8 transition-all duration-1000
+             ${subOpen ? '' : '-translate-y-[250px] -top-40 delay-150'}`}>
+
+          {
+            data?.items.map((item, index) => (
+              <button onClick={() => scrollToElement(data.items[index])} key={index}
+                className={`text-neutral-900 flex items-center gap-5 group opacity-0
+                  ${subOpen ? 'duration-200  delay-[600ms] opacity-100' : 'opacity-0 duration-200 delay-[150ms]'}`}>
+                <div className='h-4 w-[1px] rounded-full bg-neutral-700 opacity-0 group-hover:opacity-100 duration-500'></div>
+                {item}
+              </button>
+            ))
+          }
+        </div>
+
+      </nav>
+
     </div>
+
+
+
 
   )
 }

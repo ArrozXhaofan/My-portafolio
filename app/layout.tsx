@@ -28,11 +28,8 @@ export default function RootLayout({
            flex flex-col items-center justify-center  
           overflow-hidden relative">
 
-            <Navigatore />
-
-            {
-              children
-            }
+            {children}
+           
           </div>
 
         }

@@ -12,7 +12,7 @@ export function getRoutesNav() : RouteNav[] {
         {title: 'Habilidades', path: '/habilidades'},
         {title: 'Proyectos', path: '/proyectos'},
         {title: 'Experiencia', path: '/experiencia'},
-        {title: 'Sobre mi', path: '/about'},
+        {title: 'Sobre mi', path: '/me'},
     ]
 
     return data
