@@ -19,7 +19,7 @@ interface Props {
 
 export default function ExpCard({data}: Props) {
 
-    let linesIndex = data.subTasks.length - 2
+    const linesIndex = data.subTasks.length - 2
 
     return (
         <div className='w-full flex flex-col justify-center items-center bg-secodary py-9 gap-12' id={data.empresa}>
