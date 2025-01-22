@@ -4,13 +4,11 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Navigatore, { SubNavConfiguration } from '../Components/Nav/Nav'
 import ExpCard, { ExpModel } from '../Components/ExpCard/ExpCard'
+
+
+
+
 export default function ExperienciaView() {
-
-    const [isOpen, getIsOpen] = useState(false)
-
-    function clickOpen() {
-        getIsOpen(!isOpen)
-    }
 
     const data: ExpModel[] = [
         {

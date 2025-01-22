@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navigatore from "@/app/Components/Nav/Nav";
-
 export const metadata: Metadata = {
   title: "My Projects",
   description: "Jeanpiere Laura's projects",
