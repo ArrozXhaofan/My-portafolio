@@ -394,7 +394,6 @@ export default function Home() {
         <ScrollUpButton/>
       </div>
 
-      <Footer/>
     </>
 
       

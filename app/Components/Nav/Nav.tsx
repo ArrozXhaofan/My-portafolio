@@ -1,12 +1,13 @@
 "use client"
 
 import { RouteNav, getRoutesNav } from '@/models';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export interface SubNavConfiguration {
   title: string
   items: string[]
+  //heigth: this.items.length * 80
 }
 
  interface Props {
@@ -23,6 +24,17 @@ export default function Navigatore({ data }: Props) {
   const [isOnContact, getIsOnContact] = useState(false)
   const [isPhone, getIsPhone] = useState(false)
   const [isMail, getIsMail] = useState(false)
+
+  const [height, setHeight] = useState('')
+
+  useEffect(() => {
+    if (data != null) {
+      let index = `h-[${data.items.length * 80}px]`;
+      setHeight(index);  // Esto solo se ejecuta cuando `data` cambia.
+    }
+  }, [data])
+
+  console.log(height)
 
   function clickToPhone() {
     getIsPhone(!isPhone)
@@ -59,8 +71,6 @@ export default function Navigatore({ data }: Props) {
     }
     setSubOpen(!subOpen)
   }
-
-  
 
   return (
     <div className='fixed top-0 w-screen z-40 select-none'>
@@ -216,10 +226,11 @@ export default function Navigatore({ data }: Props) {
       </nav>
 
       {/** SUBNAV */}
-      <nav className={` ${data ? '' : 'hidden'}
+      <nav style={{ height: subOpen ? `${(data?.items.length ?? 0) * 60}px` : '40px' }} 
+        className={` ${data ? '' : 'hidden'}
                       w-screen backdrop-blur-md bg-white bg-opacity-60 flex flex-col justify-start  
                       items-center px-10 border-b-[0.5px] border-neutral-500 top-12 lg:top-7 absolute
-                      transition-all duration-300 delay-[175ms] ${subOpen ? 'h-[20vh] ' : 'h-10'}`}>
+                      transition-all duration-300 delay-[175ms]`}>
 
         <div className='w-full h-10 max-w-lg flex justify-between items-center absolute px-9'>
           <span className='font-medium'>{data?.title}</span>

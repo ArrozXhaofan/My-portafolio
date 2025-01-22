@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "./Components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "My Projects",
@@ -27,6 +28,8 @@ export default function RootLayout({
           overflow-hidden relative">
 
             {children}
+
+            <Footer/>
            
           </div>
 
