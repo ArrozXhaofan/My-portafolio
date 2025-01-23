@@ -9,7 +9,6 @@ import 'aos/dist/aos.css'
 import ScrollDownButton from "../Components/ScrollButtons/ScrollDownButton";
 import ScrollUpButton from "../Components/ScrollButtons/ScrollUpButton";
 import ProjectView from "../Components/ProjectView/ProjectView";
-import { ProjectModel } from "@/models";
 import { SubNavConfiguration } from "../Components";
 import Navigatore from "../Components/Nav/Nav";
 import { PjtRepository } from "../Repositories/PjsRepository";
