@@ -32,7 +32,7 @@ export default function Proyectos() {
 
     return (
         <>
-            <Navigatore data={data} />
+            <Navigatore setting={data} />
 
             <div className="w-full max-w-4xl min-h-screen pt-7
             flex flex-col justify-center items-center

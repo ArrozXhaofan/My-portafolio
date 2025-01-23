@@ -39,15 +39,15 @@ export default function ExpCard({data}: Props) {
                             md:justify-center'>
 
                 <div className='flex flex-col items-center gap-[30px] relative '>
-                    <div className='absolute z-10 top-[15]'>
+                    <div className='absolute z-10 top-[15px]'>
                         {
                             data.subTasks.map((_,index) => (
                                 index < linesIndex ?
-                                <div key={index} className='h-[60] w-[1] top-[15] bg-gray-800'></div> : 
+                                <div key={index} className='h-[60px] w-[1px] top-[15px] bg-gray-800'></div> : 
                                 <div key={index} className='hidden'></div>
                             ))
                         }
-                        <div className='h-[60] w-[1] top-[15] bg-gray-800'></div>
+                        <div className='h-[60px] w-[1px] top-[15px] bg-gray-800'></div>
                     </div>
                     {
                         data.subTasks.map((_,index) => (
@@ -59,13 +59,13 @@ export default function ExpCard({data}: Props) {
                     }
                 </div>
 
-                <div className=' h-full flex flex-col gap-[15]'>
+                <div className=' h-full flex flex-col gap-[15px]'>
                     {
                         data.subTasks.map(item => (
                             <div className='h-fit' key={item.name}>
                                 <span className='text-blue-500 text-sm'>{item.name}</span>
 
-                                <span className='text-sf-gray flex gap-[8]'>
+                                <span className='text-sf-gray flex gap-[8px]'>
                                     <Image width={12} height={12} src={'/symbols/timer.svg'} alt='icon timer' />
                                     <span className='font-light text-[0.8rem]'>{item.time}</span>
                                 </span>

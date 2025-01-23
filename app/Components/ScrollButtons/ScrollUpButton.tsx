@@ -11,7 +11,9 @@ export default function ScrollUpButton() {
         <button onClick={resetScroll}
             className='select-none 
             hover:scale-95 active:scale-50 transition-all'>
-            <Image width={25} height={25} src='/symbols/arrow.up.circle.svg' alt='flecha' />
+            <Image width={25} height={25} src='/symbols/arrow.up.circle.svg' alt='flecha'
+                className='p1'
+            />
         </button>
     )
 }

@@ -11,10 +11,10 @@ export interface SubNavConfiguration {
 }
 
 interface Props {
-  data?: SubNavConfiguration
+  setting?: SubNavConfiguration
 }
 
-export default function Navigatore({ data }: Props) {
+export default function Navigatore({ setting }: Props) {
 
   const routesNavs: RouteNav[] = getRoutesNav()
 
@@ -28,17 +28,17 @@ export default function Navigatore({ data }: Props) {
   const [height, setHeight] = useState('')
 
   useEffect(() => {
-    if (data != null) {
-      if (data.items.length == 1) {
+    if (setting != null) {
+      if (setting.items.length == 1) {
         const index = '90';
         setHeight(index)
       } else {
-        const index = `${data.items.length * 52}`;
+        const index = `${40 + (setting.items.length * 40) }`;
         setHeight(index)
       }
 
     }
-  }, [data])
+  }, [setting])
 
   function clickToPhone() {
     getIsPhone(!isPhone)
@@ -77,10 +77,10 @@ export default function Navigatore({ data }: Props) {
   }
 
   return (
-    <div className='fixed top-0 w-screen z-40 select-none'>
+    <div className='fixed z-50 top-0 w-screen select-none'>
 
       {/*SMALL SCREENS NAV*/}
-      <nav className={`w-screen transition-all duration-500 ease-in-out delay-150 lg:hidden 
+      <nav className={` w-screen transition-all duration-500 ease-in-out delay-150 lg:hidden 
               ${open ? 'h-screen' : 'h-12'} backdrop-blur-md bg-neutral-800 bg-opacity-50 top-0 z-10 select-none relative
               overflow-hidden `} >
 
@@ -153,8 +153,8 @@ export default function Navigatore({ data }: Props) {
       </nav>
 
       {/*BIG SCREENS NAV*/}
-      <nav className={`w-full h-7 backdrop-blur-lg bg-neutral-800 bg-opacity-50 hidden lg:flex
-               justify-center items-center top-0 absolute z-10 select-none`} >
+      <nav className={` w-full h-7 backdrop-blur-lg bg-neutral-800 bg-opacity-50 hidden lg:flex
+               justify-center items-center top-0  z-10 select-none`} >
 
         <div className={`text-white opacity-85 font-sf-thin text-xs max-w-2xl flex gap-6 items-center 
         transition-all duration-500 `}>
@@ -231,13 +231,13 @@ export default function Navigatore({ data }: Props) {
 
       {/** SUBNAV */}
       <nav style={{ height: subOpen ? `${height}px` : '40px' }}
-        className={` ${data ? '' : 'hidden'}
+        className={` ${setting ? '' : 'hidden'}  absolute
                       w-screen backdrop-blur-md bg-white bg-opacity-60 flex flex-col justify-start  
-                      items-center px-10 border-b-[0.5px] border-neutral-500 top-12 lg:top-7 absolute
+                      items-center px-10 border-b-[0.5px] border-neutral-500 top-12 lg:top-7 
                       transition-all duration-300 delay-[175ms]`}>
 
         <div className='w-full h-10 max-w-lg flex justify-between items-center absolute px-9'>
-          <span className='font-medium'>{data?.title}</span>
+          <span className='font-medium'>{setting?.title}</span>
           <span className='flex justify-center items-center'>
 
             <button onClick={() => clickSubOpen()} className='p-2'>
@@ -254,8 +254,8 @@ export default function Navigatore({ data }: Props) {
              ${subOpen ? '' : '-translate-y-[250px] -top-40 delay-150'}`}>
 
           {
-            data?.items.map((item, index) => (
-              <button onClick={() => scrollToElement(data.items[index])} key={index}
+            setting?.items.map((item, index) => (
+              <button onClick={() => scrollToElement(item)} key={index}
                 className={`text-neutral-900 flex items-center gap-5 group opacity-0
                   ${subOpen ? 'duration-200  delay-[600ms] opacity-100' : 'opacity-0 duration-200 delay-[150ms]'}`}>
                 <div className='h-4 w-[1px] rounded-full bg-neutral-700 opacity-0 group-hover:opacity-100 duration-500'></div>
@@ -264,7 +264,6 @@ export default function Navigatore({ data }: Props) {
             ))
           }
         </div>
-
       </nav>
 
     </div>

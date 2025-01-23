@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Navigatore, { SubNavConfiguration } from '../Components/Nav/Nav'
 import ExpCard from '../Components/ExpCard/ExpCard'
 import { ExpReposotory } from '../Repositories'
+import ScrollUpButton from '../Components/ScrollButtons/ScrollUpButton'
 
 
 
@@ -14,7 +15,7 @@ export default function ExperienciaView() {
 
     const navItems: SubNavConfiguration = {
         title: 'Experiencia',
-        items: [ 
+        items: [
             'DarkSam S.A.C 2',
             "VuelaItalia Viaggi",
             'Milanopost Express',
@@ -24,7 +25,7 @@ export default function ExperienciaView() {
 
     return (
         <>
-            <Navigatore data={navItems} />
+            <Navigatore setting={navItems} />
 
             <div className='text-white w-full max-w-3xl min-h-screen bg-secodary flex flex-col justify-start items-center pt-20
         lg:pt-14'>
@@ -70,6 +71,11 @@ export default function ExperienciaView() {
                         ))
                     }
                 </div>
+
+            </div>
+
+            <div className='p-7'>
+                <ScrollUpButton />
 
             </div>
         </>

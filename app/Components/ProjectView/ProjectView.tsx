@@ -36,7 +36,7 @@ export default function ProjectView({ dato }: Props) {
                     width={170} height={0} src={dato.imgLeft} alt="proyecto 1"
                     className={`border-[0.5px] border-neutral-500 transition-all duration-700 ease-in-out
                                     hover:drop-shadow-project-cyan 
-                                    z-0 translate-x-28 hover:translate-x-[100px]  group-hover:translate-x-20
+                                    z-0 translate-x-28 hover:translate-x-[100px]  group-hover:translate-x-16
                                      rounded-[1.5rem]  cursor-pointer`}
                 />
                 <Image
@@ -50,7 +50,7 @@ export default function ProjectView({ dato }: Props) {
                     width={170} height={0} src={dato.imgRight} alt="proyecto 1"
                     className={`border-[0.5px] border-neutral-500 transition-all duration-700 ease-in-out
                                     hover:drop-shadow-project-cyan 
-                                    z-0 -translate-x-28 hover:-translate-x-[100px]  group-hover:-translate-x-20
+                                    z-0 -translate-x-28 hover:-translate-x-[100px]  group-hover:-translate-x-16
                                     rounded-[1.5rem]  cursor-pointer`}
                 />
             </div>

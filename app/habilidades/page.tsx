@@ -5,7 +5,8 @@ import { useEffect } from "react"
 import Image from "next/image"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Navigatore from "../Components/Nav/Nav"
+import Navigatore, { SubNavConfiguration } from "../Components/Nav/Nav"
+import ScrollUpButton from "../Components/ScrollButtons/ScrollUpButton"
 
 export default function Habilidades() {
 
@@ -18,14 +19,23 @@ export default function Habilidades() {
     const msDurationPrimary = 300
     const animationFirst = "zoom in"
 
+    const navSetting: SubNavConfiguration = {
+        title: 'Habilidades',
+        items: [
+            'Main skills',
+            'Experiencia tecnica'
+        ]
+    }
+
     return (
 
         <>
-            <Navigatore />
+            <Navigatore setting={navSetting} />
 
-            <div className=" w-full h-full flex flex-col justify-center items-center">
+            <div className=" w-full h-full flex flex-col justify-center items-center pt-14 lg:pt-7">
 
-                <div className='lg:max-w-5xl w-full  py-16 px-3 md:max-w-2xl flex flex-col gap-16 lg:gap-4 lg:flex-row '>
+                <div id="Main skills"
+                    className='lg:max-w-5xl w-full  py-16 px-3 md:max-w-2xl flex flex-col gap-16 lg:gap-4 lg:flex-row '>
 
                     <div className=''>
                         <h4 className='text-white font-bold text-4xl pb-10'>
@@ -130,7 +140,7 @@ export default function Habilidades() {
                                 <div className='flex flex-col gap-2 text-white'>
                                     <span className=' font-sf-regular-rounded text-2xl'>Typescript</span>
                                     <p className='font-sf-regular-rounded text-sm text-neutral-400'>
-                                        Experiencia en la creacion de webs con TypesScript para mayor seguridad en el tipado de datos y 
+                                        Experiencia en la creacion de webs con TypesScript para mayor seguridad en el tipado de datos y
                                         buenas practicas para un codigo legible y escalable con los años.
                                     </p>
                                 </div>
@@ -189,7 +199,8 @@ export default function Habilidades() {
 
                 </div>
 
-                <div className='lg:max-w-4xl w-full  py-16 px-3 md:max-w-2xl flex flex-col gap-16 lg:gap-4 lg:flex-row '>
+                <div id="Experiencia tecnica"
+                    className='lg:max-w-4xl w-full  py-16 px-3 md:max-w-2xl flex flex-col gap-16 lg:gap-4 lg:flex-row '>
                     <div className='flex flex-col w-full justify-center items-center gap-10'>
                         <h4 className='text-white font-bold text-4xl pb-10'>
                             Experiencia tecnica
@@ -243,7 +254,7 @@ export default function Habilidades() {
                                     className='pb-3' />
                                 <span className=' font-sf-regular-rounded text-md'>Desarrollo de vistas</span>
                                 <p className='font-sf-thin text-sm text-neutral-400 w-72 '>
-                                   Alta experiencia en la creacion de vistas tanto en aplicaciones moviles y webs.
+                                    Alta experiencia en la creacion de vistas tanto en aplicaciones moviles y webs.
                                 </p>
                             </div>
 
@@ -263,6 +274,11 @@ export default function Habilidades() {
 
                     </div>
                 </div>
+
+            </div>
+
+            <div className="p-7">
+                <ScrollUpButton />
 
             </div>
         </>
