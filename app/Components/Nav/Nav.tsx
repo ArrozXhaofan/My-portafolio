@@ -268,8 +268,5 @@ export default function Navigatore({ setting }: Props) {
 
     </div>
 
-
-
-
   )
 }
