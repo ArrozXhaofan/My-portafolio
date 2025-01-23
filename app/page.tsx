@@ -1,9 +1,11 @@
 "use client"
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
 import ScrollDownButton from './Components/ScrollButtons/ScrollDownButton';
 import ScrollUpButton from './Components/ScrollButtons/ScrollUpButton';
 import Navigatore from './Components/Nav/Nav';
@@ -20,9 +22,9 @@ export default function Home() {
 
   return (
     <>
-    <Navigatore />
+      <Navigatore />
 
-    <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
+      <div className="max-w-4xl min-h-screen flex flex-col gap-5 justify-center items-center relative">
         <img
           data-aos-delay="1000" data-aos-duration="3000" data-aos="fade up"
           src="hello1.png" alt="Frase inial"
@@ -42,6 +44,13 @@ export default function Home() {
             iOS Developer
           </h1>
         </div>
+
+        <Image width={500} height={300} src={'/inicio/p1.png'} alt='iphone'
+          data-aos-delay="2500"
+          data-aos-duration="2000"
+          data-aos="zoom-in"
+          className='py-20 drop-shadow-project-cyan'
+        />
 
         <ScrollDownButton scroll={500} />
 
@@ -107,35 +116,34 @@ export default function Home() {
           </h3>
 
           <div className='flex-wrap pt-20 justify-center gap-5 hidden md:flex'>
+
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"
-              src="./proyects/p1.png" alt="proyecto 1 reference"
+              src="./proyects/p6.svg" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
-              src="./proyects/p2.png" alt="proyecto 1 reference"
+              src="./proyects/p2.svg" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-            <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"
-              src="./proyects/p3.png" alt="proyecto 1 reference"
-              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
-              src="./proyects/p4.png" alt="proyecto 1 reference"
+              src="./proyects/p4.svg" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"
-              src="./proyects/p5.png" alt="proyecto 1 reference"
+              src="./proyects/p5.svg" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
           </div>
 
           <div className='py-5 w-screen md:hidden scroll-smooth'>
             <div className='flex gap-5 p-9 overflow-x-scroll scroll-smooth'>
-              <img src="./proyects/p4.png" alt=""
-                className='h-[600] bject-contain rounded-[2.5rem] border-[0.5px] border-neutral-600' />
-              <img src="./proyects/p3.png" alt=""
-                className='h-[600] bject-contain rounded-[2.5rem] border-[0.5px] border-neutral-600' />
-              <img src="./proyects/p2.png" alt=""
-                className='h-[600] bject-contain rounded-[2.5rem] border-[0.5px] border-neutral-600' />
-              <img src="./proyects/p5.png" alt=""
-                className='h-[600] bject-contain rounded-[2.5rem] border-[0.5px] border-neutral-600' />
-              <img src="./proyects/p1.png" alt=""
-                className='h-[600] bject-contain rounded-[2.5rem] border-[0.5px] border-neutral-600' />
+              <img src="./proyects/p4.svg" alt=""
+                className='h-[500px] bject-contain' />
+              <img src="./proyects/p3.svg" alt=""
+                className='h-[500px] bject-contain' />
+              <img src="./proyects/p2.svg" alt=""
+                className='h-[500px] bject-contain' />
+              <img src="./proyects/p5.svg" alt=""
+                className='h-[500px] bject-contain' />
+              <img src="./proyects/p1.svg" alt=""
+                className='h-[500px] bject-contain' />
             </div>
 
           </div>
@@ -144,15 +152,15 @@ export default function Home() {
 
       </div>
 
-      
+
 
       <div className='p-10'>
-        <ScrollUpButton/>
+        <ScrollUpButton />
       </div>
 
     </>
 
-      
+
 
   );
 }
