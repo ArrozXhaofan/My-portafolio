@@ -53,7 +53,7 @@ export default function ExperienciaView() {
                         </span>
                     </button>
 
-                    <img src="/exp-p1.png" alt="exp photo 1"
+                    <Image width={500} height={500} src="/exp-p1.png" alt="exp photo 1"
                         className='p-6 max'
                     />
 
