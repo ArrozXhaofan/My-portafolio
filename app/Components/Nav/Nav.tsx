@@ -10,7 +10,7 @@ export interface SubNavConfiguration {
   //heigth: this.items.length * 80
 }
 
- interface Props {
+interface Props {
   data?: SubNavConfiguration
 }
 
@@ -29,12 +29,16 @@ export default function Navigatore({ data }: Props) {
 
   useEffect(() => {
     if (data != null) {
-      const index = `h-[${data.items.length * 80}px]`;
-      setHeight(index);  // Esto solo se ejecuta cuando `data` cambia.
+      if (data.items.length == 1) {
+        const index = '90';
+        setHeight(index)
+      } else {
+        const index = `${data.items.length * 52}`;
+        setHeight(index)
+      }
+
     }
   }, [data])
-
-  console.log(height)
 
   function clickToPhone() {
     getIsPhone(!isPhone)
@@ -61,7 +65,7 @@ export default function Navigatore({ data }: Props) {
     setOpen(false)
   }
 
-  function scrollToElement(id:string) {
+  function scrollToElement(id: string) {
     const element = document.getElementById(id);
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
@@ -226,7 +230,7 @@ export default function Navigatore({ data }: Props) {
       </nav>
 
       {/** SUBNAV */}
-      <nav style={{ height: subOpen ? `${(data?.items.length ?? 0) * 60}px` : '40px' }} 
+      <nav style={{ height: subOpen ? `${height}px` : '40px' }}
         className={` ${data ? '' : 'hidden'}
                       w-screen backdrop-blur-md bg-white bg-opacity-60 flex flex-col justify-start  
                       items-center px-10 border-b-[0.5px] border-neutral-500 top-12 lg:top-7 absolute

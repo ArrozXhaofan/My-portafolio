@@ -12,6 +12,7 @@ import ProjectView from "../Components/ProjectView/ProjectView";
 import { ProjectModel } from "@/models";
 import { SubNavConfiguration } from "../Components";
 import Navigatore from "../Components/Nav/Nav";
+import { PjtRepository } from "../Repositories/PjsRepository";
 
 export default function Proyectos() {
 
@@ -22,34 +23,12 @@ export default function Proyectos() {
     }, []);
 
 
-    const dataTest: ProjectModel[] = [
-        {
-            title: 'MotoUI',
-            description: 'Este es mi projecto numero uno qeue necesito para mostrasl los que puedo haer yed t no se qumasl para demosdsrer fdsfgtg hgh pequeña descriopcion de mi proee fd proyecto fsdf gfg f',
-            imgReferences: ['/projects/p1.png', '/projects/p1.png', '/projects/p1.png'],
-            githubRepository: 'https://www.instagram.com/direct/inbox/',
-            reverse: false
-        },
-        {
-            title: 'RickCloud',
-            description: 'Este es mi projecto numero uno qeue necesito para mostrasl los que puedo haer yed t no se qumasl para demosdsrer fdsfgtg hgh pequeña descriopcion de mi proee fd proyecto fsdf gfg f',
-            imgReferences: ['/projects/p1.png', '/projects/p1.png', '/projects/p1.png'],
-            githubRepository: 'https://www.instagram.com/direct/inbox/',
-            reverse: true
-        },
-        {
-            title: 'SaveLink',
-            description: 'Este es mi projecto numero uno qeue necesito para mostrasl los que puedo haer yed t no se qumasl para demosdsrer fdsfgtg hgh pequeña descriopcion de mi proee fd proyecto fsdf gfg f',
-            imgReferences: ['/projects/p1.png', '/projects/p1.png', '/projects/p1.png'],
-            githubRepository: 'https://www.instagram.com/direct/inbox/',
-            reverse: false
-        }
-    ]
+    const repository = new PjtRepository()
 
 
     const data: SubNavConfiguration = {
         title: 'Proyectos',
-        items: ['MotoUI', 'RickCloud','SaveLink']
+        items: ['MotoUI', 'RickCloud','AuthTest','ImcUI']
     }
 
     return (
@@ -89,7 +68,7 @@ export default function Proyectos() {
                 <div>
 
                     {
-                        dataTest.map((project, index) => (
+                        repository.allProyects.map((project, index) => (
                             <div key={index} id={project.title} className="h-full">
                                 <ProjectView dato={project} key={index} />
 
