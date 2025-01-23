@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect } from 'react';
-import Image from 'next/image';
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -18,8 +17,6 @@ export default function Home() {
     });
   }, []);
 
-  const msDurationPrimary = 300
-  const animationFirst = "zoom in"
 
   return (
     <>
