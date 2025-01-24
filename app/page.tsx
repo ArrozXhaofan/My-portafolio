@@ -118,32 +118,29 @@ export default function Home() {
           <div className='flex-wrap pt-20 justify-center gap-5 hidden md:flex'>
 
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"
-              src="./proyects/p6.svg" alt="proyecto 1 reference"
+              src="/proyects/p6.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
-              src="./proyects/p2.svg" alt="proyecto 1 reference"
-              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-
+              src="/proyects/p2.png" alt="proyecto 1 reference"
+              className='h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
-              src="./proyects/p4.svg" alt="proyecto 1 reference"
+              src="/proyects/p4.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-            <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"
-              src="./proyects/p5.svg" alt="proyecto 1 reference"
+              <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
+              src="/proyects/p5.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
           </div>
 
           <div className='py-5 w-screen md:hidden scroll-smooth'>
             <div className='flex gap-5 p-9 overflow-x-scroll scroll-smooth'>
-              <img src="./proyects/p4.svg" alt=""
-                className='h-[500px] bject-contain' />
-              <img src="./proyects/p3.svg" alt=""
-                className='h-[500px] bject-contain' />
-              <img src="./proyects/p2.svg" alt=""
-                className='h-[500px] bject-contain' />
-              <img src="./proyects/p5.svg" alt=""
-                className='h-[500px] bject-contain' />
-              <img src="./proyects/p1.svg" alt=""
-                className='h-[500px] bject-contain' />
+              <img src="/proyects/p6.png" alt=""
+                className='h-[500px] object-contain' />
+              <img src="/proyects/p2.png" alt=""
+                className='h-[500px] object-contain' />
+              <img src="/proyects/p4.png" alt=""
+                className='h-[500px] object-contain' />
+              <img src="/proyects/p5.png" alt=""
+                className='h-[500px] object-contain' />
             </div>
 
           </div>
