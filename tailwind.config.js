@@ -23,15 +23,15 @@ module.exports = {
         'gray-me': '#1D1D20'
       },
       fontFamily: {
-        "sf-hello": ["sf-hello"],
-        "sf-medium": ["sf-medium"],
-        "sf-regular": ["sf-regular"],
-        "sf-semibold": ["sf-semibold"],
-        "sf-thin": ["sf-thin"],
+        "sf-hello": ["sf-hello","sans-serif"],
+        "sf-medium": ["sf-medium", "sans-serif"],
+        "sf-regular": ["sf-regular", "sans-serif"],
+        "sf-semibold": ["sf-semibold", "sans-serif"],
+        "sf-thin": ["sf-thin", "sans-serif"],
         "sf-ultrathin": ["sf-ultrathin"],
-        "sf-regular-rounded": ["sf-regular-rounded"],
-        "sf-semibold-rounded": ["sf-semibold-rounded"],
-        "sf-text-medium": ["sf-text-medium"],
+        "sf-regular-rounded": ["sf-regular-rounded", "sans-serif"],
+        "sf-semibold-rounded": ["sf-semibold-rounded", "sans-serif"],
+        "sf-text-medium": ["sf-text-medium", "sans-serif"],
         "hel-neue": ["hel-neue", "sans-serif"]
       },
       boxShadow: {
