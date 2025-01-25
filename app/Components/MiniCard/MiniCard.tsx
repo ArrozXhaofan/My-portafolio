@@ -18,9 +18,11 @@ interface Props {
 export default function MiniCard({ data }: Props) {
     return (
         <div className='text-sf-gray p-3 flex flex-col gap-4 overflow-hidden'>
+            <div className='h-[35px]'>
             <Image width={25} height={25} src={data.imgUrl} alt='icon'
-                className=' text-emerald-400 fill-current pb-3'
-            />
+                className=' text-emerald-400 fill-current'/>
+            </div>
+            
             <p className='w-[170px] text-sm font-medium'>
                 <span className='text-white'>{data.initText}</span>
                 {data.text}
@@ -29,7 +31,7 @@ export default function MiniCard({ data }: Props) {
 
             {
                 data.link ?
-                    <a href={data.link.path}
+                    <a href={data.link.path} target='_blank'
                         className='text-accent w-[170px] text-xs font-sf-regular-rounded-regular
                              leading-5 flex items-center gap-1 hover:underline'>
                         {data.link.name}

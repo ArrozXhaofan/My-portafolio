@@ -8,34 +8,57 @@ import MiniCard from '../Components/MiniCard/MiniCard'
 
 export default function Me() {
 
-    const testable: MiniCardModel = {
-        imgUrl: '/symbols/network.svg',
-        //initText: 'Privacy is a fundamental human right. ',
-        text: 'The best technology works for everyone. Thats why our products and services are ',
-        endText: 'inclusive by design.',
-        link: { name: 'More on Apple and privacy', path: '#' }
-    }
+    const testable: MiniCardModel[] = [
+        {
+            imgUrl: '/symbols/graduationcap.svg',
+            text: 'Estudios en el Instituto superior Senati  en la carrera de ',
+            endText: 'desarrollo de software.',
+        },
+        {
+            imgUrl: '/symbols/chart.bar.svg',
+            initText: 'En constante aprendizaje ',
+            text: 'en el desarrollo iOS y  ',
+            endText: 'hibrido con Flutter',
+        },
+        {
+            imgUrl: '/symbols/building.2.svg',
+            initText: 'Experiencia certificada en el extranjero, ',
+            text: 'Aportando a equipos en diferentes idiomas',
+        },
+        {
+            imgUrl: '/symbols/network.svg',
+            text: 'Mira mi resumen para obtener mas detalles.',
+            link: { name: 'Ver curriculim vitae', path: '/files/cv_jeanlaura.pdf' }
+        },
+    ]
 
     return (
         <>
             <Navigatore />
 
-            <div className='w-full max-w-4xl bg-gray-me py-20 flex flex-col items-center'>
+            <div className='w-full max-w-4xl bg-gray-me py-20 pt-32 flex flex-col items-center px-2 md:px-0'>
 
                 <h1 className='text-center text-white text-5xl font-semibold w-[420px] '>
-                    Designed to make a difference.
+                    Mas informacion sobre mi
                 </h1>
 
-                <h3 className='text-xs text-sf-gray font-medium w-[420px] text-center py-6'>
-                    What matters to you matters to Apple, too. From using more recycled content that minimizes
-                    environmental impact. To privacy protections that give you more control over your data. To
-                    creating built-in features that make Mac accessible to all.
+                <h3 className='text-xs text-sf-gray font-medium md:w-[420px] text-center py-6'>
+                    Soy un desarrollador en
+                    conocimientos solidos en iOS con
+                    experiencia en proyectos reales en
+                    el extranjero. Me adapto
+                    rápidamente a cualquier equipo de
+                    desarrollo, listo para aplicar mis
+                    conocimientos en el desarrollo de
+                    aplicaciones moviles.
                 </h3>
 
-                <div className='flex flex-wrap md:flex-row justify-center'>
-                    <MiniCard data={testable} />
-                    <MiniCard data={testable} />
-                    <MiniCard data={testable} />
+                <div className='flex flex-wrap md:flex-row justify-center px-0'>
+                    {
+                        testable.map((data, index) => (
+                            <MiniCard data={data} key={index} />
+                        ))
+                    }
                 </div>
 
 
@@ -59,7 +82,7 @@ export default function Me() {
                                 className='z-10 '
                             />
                             <p className='text-white text-4xl font-semibold w-[300px]'>
-                                Fly through demanding tasks up to 9.8x faster.*
+                                Español, Italiano, Ingles
                             </p>
                         </div>
 
@@ -70,7 +93,7 @@ export default function Me() {
                         p-10 flex justify-start items-center">
                         <div className='flex items-center gap-5'>
                             <Image width={70} height={70} src='/symbols/apple.intelligence.svg' alt='icon' />
-                            <span className='text-white font-bold text-xl'>Built for Apple Intelligence.</span>
+                            <span className='text-white font-bold text-xl'>Ahora en Lima - Peru.</span>
                         </div>
                     </div>
 
@@ -82,7 +105,7 @@ export default function Me() {
                                 className='z-10 '
                             />
                             <p className='text-white text-4xl font-semibold w-[300px]'>
-                                Fly through demanding tasks up to 9.8x faster.*
+                                Con dos años de experiencia en el rubro.
                             </p>
                         </div>
 
@@ -93,12 +116,9 @@ export default function Me() {
                         p-10 flex justify-start items-center">
                         <div className='flex items-center gap-5'>
                             <Image width={70} height={70} src='/symbols/apple.svg' alt='icon' />
-                            <span className='text-white font-medium text-xl'>Built for Apple Iddntelligence.</span>
+                            <span className='text-white font-medium text-xl'>Desarrollo iOS y front-end.</span>
                         </div>
                     </div>
-
-
-
 
 
                 </div>

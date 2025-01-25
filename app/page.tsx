@@ -23,13 +23,13 @@ export default function Home() {
   const testCard1: CardModel = {
     subtitle: 'Nuevas tecnologias',
     title: 'Creacion de web y apps para iOS',
-    text: 'Con mis conocimientos crear applicaciones y webs amigables al usuario.',
+    text: 'Con mis conocimientos creare aplicaciones y webs amigables al usuario.',
   }
 
   const testCard2: CardModel = {
-    subtitle: 'Nuevas tecnologias',
-    title: 'Creacion de web y apps para iOS',
-    text: 'Con mis conocimientos crear applicaciones y webs amigables al usuario.',
+    subtitle: 'Desarrollo limpio',
+    title: 'Proactividad y disponabilidad',
+    text: 'Disponibilidad para unirme a un equipo de desarrollo.',
     dark: true
   }
 
@@ -92,8 +92,7 @@ export default function Home() {
             Conocimientos
           </h3>
           <p data-aos="fade-up" className='text-sm text-gray-400 text-center max-w-80 md:text-lg md:max-w-96'>
-            Con la finalidad de mejorar mis habilidades en el desarrollo de aplicaciones móviles, he realizado
-            algunos proyectos personales.
+            Experiencia en entornos Apple y Web dinamicas. Con los conocimients necesarios para apoyar al equipo.
           </p>
         </div>
 
@@ -132,16 +131,16 @@ export default function Home() {
 
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"
               src="/proyects/p6.png" alt="proyecto 1 reference"
-              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+              className=' h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
               src="/proyects/p2.png" alt="proyecto 1 reference"
               className='h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
               src="/proyects/p4.png" alt="proyecto 1 reference"
-              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+              className='h-[350px]' />
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
               src="/proyects/p5.png" alt="proyecto 1 reference"
-              className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
+              className='h-[350px]' />
           </div>
 
           <div className='py-5 w-screen md:hidden scroll-smooth'>
@@ -166,7 +165,7 @@ export default function Home() {
       <div className='w-screen max-w-5xl bg-black flex flex-col md:flex-row items-center justify-center flex-wrap py-20'>
         <Card data={testCard1}>
           <div className=' overflow-hidden'>
-            <Image data-aos='fade-right'
+            <Image data-aos='fade-right' data-aos-delay={0}
               width={350} height={350} src={'/inicio/camaraiphone.jpg'} alt='camaraiphone'
               className=''
             />
@@ -176,10 +175,10 @@ export default function Home() {
 
         <Card data={testCard2}>
           <div className='relative flex flex-col items-center gap-5 pb-14 overflow-hidden'>
-            <Image data-aos='fade-right'
+            <Image data-aos='fade-right'  data-aos-delay={0}
               width={350} height={350} src={'/inicio/b-mac-1.jpg'} alt='camaraiphone'
               className='' />
-            <Image data-aos='fade-left'
+            <Image data-aos='fade-left'  data-aos-delay={0}
               width={350} height={350} src={'/inicio/b-mac-2.jpg'} alt='camaraiphone'
               className='' />
           </div>
