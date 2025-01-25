@@ -18,7 +18,9 @@ module.exports = {
       colors: {
         'accent': '#007aff',
         'secodary': '#1C1C1C',
-        'sf-gray': '#A1A1A6'
+        'sf-gray': '#A1A1A6',
+        'white-inicio': '#FAFAFA',
+        'gray-me': '#1D1D20'
       },
       fontFamily: {
         "sf-hello": ["sf-hello"],
@@ -31,6 +33,13 @@ module.exports = {
         "sf-semibold-rounded": ["sf-semibold-rounded"],
         "sf-text-medium": ["sf-text-medium"],
         "hel-neue": ["hel-neue", "sans-serif"]
+      },
+      boxShadow: {
+        'inner-gradient': [
+          'inset 10px 10px 10px rgba(47, 118, 206, 0.9)',
+          'inset -10px -10px 10px rgba(192, 69, 150, 0.9)',
+          'inset  0px 0px 20px rgba(202, 106, 23, 1)',
+        ]
       },
       textShadow: {
         glow: '0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 204, 153, 0.6), 0 0 24px rgba(255, 102, 0, 0.8), 0 0 36px rgba(255, 102, 0, 1)',

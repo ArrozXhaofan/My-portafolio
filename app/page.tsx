@@ -9,6 +9,7 @@ import 'aos/dist/aos.css'
 import ScrollDownButton from './Components/ScrollButtons/ScrollDownButton';
 import ScrollUpButton from './Components/ScrollButtons/ScrollUpButton';
 import Navigatore from './Components/Nav/Nav';
+import Card, { CardModel } from './Components/Card/Card';
 
 
 export default function Home() {
@@ -19,6 +20,18 @@ export default function Home() {
     });
   }, []);
 
+  const testCard1: CardModel = {
+    subtitle: 'Nuevas tecnologias',
+    title: 'Creacion de web y apps para iOS',
+    text: 'Con mis conocimientos crear applicaciones y webs amigables al usuario.',
+  }
+
+  const testCard2: CardModel = {
+    subtitle: 'Nuevas tecnologias',
+    title: 'Creacion de web y apps para iOS',
+    text: 'Con mis conocimientos crear applicaciones y webs amigables al usuario.',
+    dark: true
+  }
 
   return (
     <>
@@ -72,7 +85,7 @@ export default function Home() {
       </div>
 
 
-      <div className='max-w-5xl w-full p-5 md:pt-56 lg:pt-28'>
+      <div className='max-w-4xl w-full p-5 md:pt-56 lg:pt-28'>
 
         <div className=' text-white flex flex-col items-center'>
           <h3 data-aos="fade-up" className='font-sf-semibold-rounded text-2xl md:text-5xl p-6'>
@@ -126,7 +139,7 @@ export default function Home() {
             <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
               src="/proyects/p4.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
-              <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
+            <img data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
               src="/proyects/p5.png" alt="proyecto 1 reference"
               className=' rounded-[1.5rem] border-[0.5px] border-neutral-600 h-[350px]' />
           </div>
@@ -149,6 +162,29 @@ export default function Home() {
 
       </div>
 
+
+      <div className='w-screen max-w-5xl bg-black flex flex-col md:flex-row items-center justify-center flex-wrap py-20'>
+        <Card data={testCard1}>
+          <div className=' overflow-hidden'>
+            <Image data-aos='fade-right'
+              width={350} height={350} src={'/inicio/camaraiphone.jpg'} alt='camaraiphone'
+              className=''
+            />
+          </div>
+
+        </Card>
+
+        <Card data={testCard2}>
+          <div className='relative flex flex-col items-center gap-5 pb-14 overflow-hidden'>
+            <Image data-aos='fade-right'
+              width={350} height={350} src={'/inicio/b-mac-1.jpg'} alt='camaraiphone'
+              className='' />
+            <Image data-aos='fade-left'
+              width={350} height={350} src={'/inicio/b-mac-2.jpg'} alt='camaraiphone'
+              className='' />
+          </div>
+        </Card>
+      </div>
 
 
       <div className='p-10'>
