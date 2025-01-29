@@ -141,7 +141,7 @@ export default function Navigatore({ setting }: Props) {
               className={` ${isOnContact ? 'opacity-100' : '-translate-x-56 opacity-0 w-min'} transition-all duration-700 delay-[200ms]`}>
               Correo
             </a>
-            <a href='tel:+51946272030'
+            <a href='tel:+51919005795'
               className={` ${isOnContact ? 'opacity-100' : '-translate-x-56 opacity-0 w-min'} transition-all duration-700 delay-[250ms]`}>
               Telefono
             </a>
@@ -194,9 +194,9 @@ export default function Navigatore({ setting }: Props) {
           <div>
             {
               isPhone ?
-                <a href='tel:+51946272030'
+                <a href='tel:+51919005795'
                   className={`  hover:opacity-80 active:opacity-55 duration-500 p-1 select-text`}>
-                  +51 946 272 030
+                  +51 919 005 795
                 </a>
                 :
                 <button onClick={() => clickToPhone()}
